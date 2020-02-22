@@ -1,0 +1,137 @@
+[
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuTest.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuTest.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuTest.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkArray.cpp.o -c /home/singsong/CppPrj/SPH/MkArray.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkArray.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkContainer.cpp.o -c /home/singsong/CppPrj/SPH/MkContainer.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkContainer.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkMatrix.cpp.o -c /home/singsong/CppPrj/SPH/MkMatrix.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkMatrix.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkPoint.cpp.o -c /home/singsong/CppPrj/SPH/MkPoint.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkPoint.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkPointData.cpp.o -c /home/singsong/CppPrj/SPH/MkPointData.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkPointData.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkOpenGL.cpp.o -c /home/singsong/CppPrj/SPH/MkOpenGL.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkOpenGL.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkMisc.cpp.o -c /home/singsong/CppPrj/SPH/MkMisc.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkMisc.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkColor.cpp.o -c /home/singsong/CppPrj/SPH/MkColor.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkColor.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkShape.cpp.o -c /home/singsong/CppPrj/SPH/MkShape.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkShape.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLine.cpp.o -c /home/singsong/CppPrj/SPH/MkLine.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLine.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkPolygon.cpp.o -c /home/singsong/CppPrj/SPH/MkPolygon.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkPolygon.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkPlane.cpp.o -c /home/singsong/CppPrj/SPH/MkPlane.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkPlane.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkSphere.cpp.o -c /home/singsong/CppPrj/SPH/MkSphere.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkSphere.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkCube.cpp.o -c /home/singsong/CppPrj/SPH/MkCube.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkCube.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkCircle.cpp.o -c /home/singsong/CppPrj/SPH/MkCircle.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkCircle.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkArc.cpp.o -c /home/singsong/CppPrj/SPH/MkArc.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkArc.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkCylinder.cpp.o -c /home/singsong/CppPrj/SPH/MkCylinder.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkCylinder.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkRect.cpp.o -c /home/singsong/CppPrj/SPH/MkRect.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkRect.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkTriangle.cpp.o -c /home/singsong/CppPrj/SPH/MkTriangle.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkTriangle.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuSPH_mk2.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuSPH_mk2.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuSPH_mk2.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuParam.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuParam.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuParam.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuParticle.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuParticle.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuParticle.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuKernel.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuKernel.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuKernel.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuPair.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuPair.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuPair.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuGrid.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuGrid.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuGrid.cpp"
+},
+{
+  "directory": "/home/singsong/CppPrj/SPH/build",
+  "command": "/usr/bin/g++-7  -DMKDEBUG -D__GL_H__  -std=c++11 -g   -Wno-format-security -Wno-format -std=gnu++11 -o CMakeFiles/Test.dir/MkLiuBound.cpp.o -c /home/singsong/CppPrj/SPH/MkLiuBound.cpp",
+  "file": "/home/singsong/CppPrj/SPH/MkLiuBound.cpp"
+}
+]

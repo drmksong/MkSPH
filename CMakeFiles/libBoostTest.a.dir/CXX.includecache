@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/singsong/CppPrj/SPH/MkBoostTest.cpp
+MkBoostTest.hpp
+/home/singsong/CppPrj/SPH/MkBoostTest.hpp
+
+/home/singsong/CppPrj/SPH/MkBoostTest.hpp
+boost/program_options.hpp
+-
+boost/program_options/errors.hpp
+-
+iostream
+-
+vector
+-
+string
+-
+

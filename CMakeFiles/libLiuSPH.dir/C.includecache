@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/singsong/CppPrj/SPH/rngs.c
+stdio.h
+-
+time.h
+-
+rngs.h
+/home/singsong/CppPrj/SPH/rngs.h
+
+/home/singsong/CppPrj/SPH/rngs.h
+
+/home/singsong/CppPrj/SPH/rvgs.c
+math.h
+-
+rngs.h
+/home/singsong/CppPrj/SPH/rngs.h
+rvgs.h
+/home/singsong/CppPrj/SPH/rvgs.h
+
+/home/singsong/CppPrj/SPH/rvgs.h
+

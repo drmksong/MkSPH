@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -g  -rdynamic CMakeFiles/BoostTest.dir/MkBoostTest.cpp.o  -o BoostTest  -L/home/singsong/CppPrj/SPH/. -Wl,-rpath,/home/singsong/CppPrj/SPH/. -lGL -lGLU -lglut -lboost_program_options 

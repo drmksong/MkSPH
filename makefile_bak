@@ -1,0 +1,33 @@
+CC = g++
+SOURCES = MkFloat.cpp MkInt.cpp MkMatrix.cpp MkSparseMatrix.cpp MkPoint.cpp MkMisc.cpp MkLine.cpp MkPolygon.cpp MkPlane.cpp MkTriangle.cpp MkRect.cpp MkCube.cpp MkCircle.cpp MkSphere.cpp MkCylinder.cpp MkShape.cpp MkEntity.cpp MkBndCon.cpp MkRange.cpp MkLoad.cpp MkSubreact.cpp MkSteer.cpp MkStiff.cpp MkDOF.cpp MkMesh.cpp MkAnalysis.cpp MkContBeam.cpp MkMori.cpp MkExcavStep.cpp MkSection.cpp MkAnalyticSection.cpp MkDsgStd.cpp MkPaint.cpp MkSpline.cpp MkSubsid.cpp MkHeav.cpp MkPiping.cpp MkPiap.cpp MkNodalForce.cpp #MkBeamSpring.cpp
+HEADERS = MkFloat.h MkInt.h MkMatrix.h MkSparseMatrix.h MkPoint.h  MkMisc.h MkLine.h MkPolygon.h MkPlane.h MkTriangle.h MkRect.h MkCube.h MkCircle.h MkSphere.h MkCylinder.h MkShape.h MkEntity.h MkBndCon.h MkRange.h MkLoad.h MkSubreact.h MkSteer.h MkStiff.h MkDOF.h MkMesh.h MkAnalysis.h MkContBeam.h MkMori.h MkExcavStep.h MkSection.h MkAnalyticSection.h MkDsgStd.h MkPaint.h MkSpline.h MkSubsid.h MkHeav.h MkPiping.h MkPiap.h MkNodalForce.h #MkBeamSpring.h 
+OBJECTS=  MkFloat.o MkInt.o MkMatrix.o MkSparseMatrix.o MkPoint.o  MkMisc.o MkLine.o MkPolygon.o MkPlane.o MkTriangle.o MkRect.o MkCube.o MkCircle.o MkSphere.o MkCylinder.o MkShape.o MkEntity.o MkBndCon.o MkRange.o MkLoad.o MkSubreact.o MkSteer.o MkStiff.o MkDOF.o MkMesh.o MkAnalysis.o MkcontBeam.o MkMori.o MkExcavStep.o MkSection.o MkAnalyticSection.o MkDsgStd.o MkPaint.o MkSpline.o MkSubsid.o MkHeav.o MkPiping.o MkPiap.o MkNodalForce.o #MkBeamSpring.o
+INCLUDE = #-Ic:/nurbs/include -Ic:/coin3d/include -Ic:/mingw/include
+LIB =  -L. -lm -lnurb -ltran -lmkgcc   #-Lc:/mingw/lib -Lc:/nurbs/lib
+MkLIB = libmkgcc.a
+CFLAGS = -c -g -frtti  -DMKDEBUG # -DNURB -DSUN -DCOIN_NOT_DLL -DSOQT_NOT_DLL
+TFLAGS = -frtti   -DMKDEBUG # -DNURB -DSUN -DCOIN_NOT_DLL -DSOQT_NOT_DLL
+
+$(MkLIB) : $(OBJECTS) #
+	ar crvs $(MkLIB) $(OBJECTS)
+	ranlib $(MkLIB)
+
+$(OBJECTS) : $(SOURCES) $(HEADERS)
+	$(CC) $(CFLAGS) $(INCLUDE) $(SOURCES)
+
+test : mktest.o $(MkLIB)
+	$(CC) mktest.o -Lc:/nurbs/lib -L.  -lmkgcc -lnurb    -ltran  -lm -o MkTest.exe 
+
+vctest : vctest.o $(MkLIB)
+	$(CC) vctest.o -L. -lmkgcc -lm -o vctest.exe
+
+mktest.o : mktest.cpp 
+	$(CC) $(TFLAGS) $(INCLUDE) -c $<
+
+vctest.o : vctest.cpp
+	$(CC) $(TFLAGS) $(INCLUDE) -c $<
+
+.PHONY : clean
+
+clean :
+	-rm $(MkLIB) $(OBJECTS) MkTest.exe

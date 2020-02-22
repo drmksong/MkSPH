@@ -1,0 +1,1087 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 39.79     16.10    16.10                             pow
+ 19.53     24.00     7.90 3307266707     0.00     0.00  MkLiuParticles::operator[](int)
+  9.76     27.95     3.95     2001     1.97     3.84  MkLiuSPH::Pair_Count()
+  9.12     31.64     3.69     2001     1.84     8.58  MkLiuSPH::Direct_Find()
+  5.09     33.70     2.06     2001     1.03     2.11  MkLiuSPH::Int_Force()
+  4.42     35.49     1.79 137978343     0.00     0.00  MkLiuKernel::SetupAlphaD()
+  2.13     36.35     0.86 137978342     0.00     0.00  MkLiuKernel::SetSmoothLen(double)
+  1.52     36.97     0.61 306053169     0.00     0.00  MkDouble::operator()(int)
+  1.43     37.55     0.58     2001     0.29     0.54  MkLiuSPH::Art_Visc()
+  1.16     38.02     0.47 235666249     0.00     0.00  MkLiuPairs::operator[](int)
+  0.72     38.30     0.29 137135148     0.00     0.00  MkLiuPair::DWDX(int)
+  0.62     38.55     0.25     2001     0.12     0.18  MkLiuSPH::Norm_Bnd_Density()
+  0.49     38.76     0.20  4542680     0.00     0.00  MkLiuKernel::dWdY(double, double, double, double)
+  0.47     38.95     0.19  4542680     0.00     0.00  MkLiuKernel::dWdZ(double, double, double, double)
+  0.44     39.12     0.18  9070572     0.00     0.00  MkPlane::GetDistance(MkPoint&)
+  0.38     39.28     0.15  5265044     0.00     0.00  MkLiuKernel::W(double)
+  0.35     39.42     0.14     2002     0.07    11.96  MkLiuSPH::Run()
+  0.32     39.55     0.13  4542680     0.00     0.00  MkLiuKernel::dWdX(double, double, double, double)
+  0.25     39.65     0.10                             __fpclassify
+  0.25     39.75     0.10                             ldexp
+  0.22     39.84     0.09     2001     0.04     0.30  MkLiuSPH::Direct_Bnd_Find()
+  0.20     39.92     0.08  4546683     0.00     0.00  MkLiuPair::Clear()
+  0.12     39.97     0.05 15436969     0.00     0.00  MkLiuBoundarys::operator[](int)
+  0.12     40.02     0.05     2001     0.02     0.07  MkLiuSPH::Pair_Bnd_Count()
+  0.12     40.07     0.05                             floor
+  0.11     40.12     0.04  4332000     0.00     0.00  MkDouble::operator()(int, int)
+  0.10     40.16     0.04     2001     0.02     0.05  MkLiuParticles::Draw()
+  0.09     40.19     0.04                             MkLiuKernel::MkLiuKernel(MkKernelType, int, double)
+  0.07     40.22     0.03   722361     0.00     0.00  MkLiuParticle::SetupColor()
+  0.07     40.25     0.03   722361     0.00     0.00  MkLiuParticle::Draw()
+  0.07     40.28     0.03     2001     0.01    11.84  MkLiuSPH::Single_Step()
+  0.05     40.30     0.02  3122600     0.00     0.00  MkPoint::MkPoint(double, double, double)
+  0.05     40.32     0.02  1444722     0.00     0.00  MkLiuParticle::GetParticleType()
+  0.05     40.34     0.02    22013     0.00     0.00  MkDouble::MkDouble(int)
+  0.05     40.36     0.02     4004     0.00     0.03  MkLiuPairs::Initialize(int)
+  0.05     40.38     0.02     2001     0.01     0.02  MkLiuSPH::Art_Bnd_Repel()
+  0.05     40.40     0.02     2001     0.01     0.03  MkLiuSPH::Ext_Force()
+  0.05     40.42     0.02                             frexp
+  0.02     40.43     0.01  4546683     0.00     0.00  MkLiuPair::MkLiuPair()
+  0.02     40.44     0.01  3090564     0.00     0.00  MkPlane::GetNearestPoint(MkPoint&)
+  0.02     40.45     0.01  3090564     0.00     0.00  MkPoint::operator=(MkPoint const&)
+  0.02     40.46     0.01    40052     0.00     0.00  MkMatrix4::operator*=(MkMatrix4&)
+  0.00     40.46     0.00  7233615     0.00     0.00  MkLiuBoundarys::GetSize()
+  0.00     40.46     0.00  4544409     0.00     0.00  MkLiuPair::~MkLiuPair()
+  0.00     40.46     0.00   923483     0.00     0.00  MkLiuParticle::GetSmoothLen()
+  0.00     40.46     0.00   722361     0.00     0.00  MkLiuParticle::SetEta(double)
+  0.00     40.46     0.00   722361     0.00     0.00  MkLiuSPH::C_art_water(double)
+  0.00     40.46     0.00   722361     0.00     0.00  MkLiuSPH::P_art_water(double)
+  0.00     40.46     0.00   384288     0.00     0.00  MkMatrix4::operator()(int, int)
+  0.00     40.46     0.00   201120     0.00     0.00  min(double, double)
+  0.00     40.46     0.00   201120     0.00     0.00  MkLiuBoundary::GetSmoothLen()
+  0.00     40.46     0.00    64048     0.00     0.00  MkPoint::operator=(MkPoint&)
+  0.00     40.46     0.00    56068     0.00     0.00  MkMatrix4::Identity()
+  0.00     40.46     0.00    48056     0.00     0.00  MkMatrix4::Clear()
+  0.00     40.46     0.00    48056     0.00     0.00  MkMatrix4::operator=(MkMatrix4&)
+  0.00     40.46     0.00    40044     0.00     0.00  MkMatrix4::MkMatrix4()
+  0.00     40.46     0.00    32024     0.00     0.00  operator*(MkPoint&, MkMatrix4&)
+  0.00     40.46     0.00    24024     0.00     0.00  MkDouble::~MkDouble()
+  0.00     40.46     0.00     8012     0.00     0.00  MkMatrix4::Rotate(double, double, double)
+  0.00     40.46     0.00     8004     0.00     0.00  MkLiuBoundary::Draw()
+  0.00     40.46     0.00     8004     0.00     0.00  MkPlane::ApplyMatrix()
+  0.00     40.46     0.00     8004     0.00     0.00  MkMatrix4::Scale(double, double, double)
+  0.00     40.46     0.00     8004     0.00     0.00  MkMatrix4::Translate(double, double, double)
+  0.00     40.46     0.00     8004     0.00     0.00  operator*(MkMatrix4&, MkMatrix4&)
+  0.00     40.46     0.00     4054     0.00     0.00  MkPoint::MkPoint()
+  0.00     40.46     0.00     4004     0.00     0.00  MkLiuPairs::Clear()
+  0.00     40.46     0.00     2002     0.00     0.00  MkDouble::MkDouble(int, int)
+  0.00     40.46     0.00     2001     0.00     0.01  MkLiuBoundarys::Draw()
+  0.00     40.46     0.00     2001     0.00     0.06  MkLiuSPH::Draw()
+  0.00     40.46     0.00     2001     0.00     0.01  MkLiuSPH::Viscosity()
+  0.00     40.46     0.00      400     0.00     0.00  MkLiuGrids::operator()(int, int, int)
+  0.00     40.46     0.00      400     0.00     0.00  MkInt::Clear()
+  0.00     40.46     0.00      400     0.00     0.00  MkInt::MkInt()
+  0.00     40.46     0.00      400     0.00     0.00  MkLiuGrid::Initialize()
+  0.00     40.46     0.00      400     0.00     0.00  MkLiuGrid::Setup(float, float, float, float, float, float)
+  0.00     40.46     0.00      400     0.00     0.00  MkLiuGrid::MkLiuGrid()
+  0.00     40.46     0.00      372     0.00     0.00  MkLiuParticle::Initialize()
+  0.00     40.46     0.00      372     0.00     0.00  MkLiuParticle::MkLiuParticle()
+  0.00     40.46     0.00      372     0.00     0.00  MkPoint::MkPoint()
+  0.00     40.46     0.00      362     0.00     0.00  MkLiuParticles::GetSize()
+  0.00     40.46     0.00      361     0.00     0.00  MkLiuParticle::SetColorType(CType)
+  0.00     40.46     0.00       36     0.00     0.00  MkVector::operator()(int)
+  0.00     40.46     0.00       20     0.00     0.00  MkShape::MkShape()
+  0.00     40.46     0.00       16     0.00     0.00  MkLine::MkLine()
+  0.00     40.46     0.00       12     0.00     0.00  MkPoint::Set(double, double, double)
+  0.00     40.46     0.00       12     0.00     0.00  MkDouble::Initialize(int)
+  0.00     40.46     0.00       12     0.00     0.00  MkDouble::MkDouble()
+  0.00     40.46     0.00       12     0.00     0.00  MkVector::~MkVector()
+  0.00     40.46     0.00       11     0.00     0.00  MkLiuParticle::~MkLiuParticle()
+  0.00     40.46     0.00        8     0.00     0.00  MkPlane::CalcABCD()
+  0.00     40.46     0.00        8     0.00     0.00  MkPoint::Unify()
+  0.00     40.46     0.00        8     0.00     0.00  MkVector::Unify()
+  0.00     40.46     0.00        8     0.00     0.00  MkVector::MkVector(double, double, double)
+  0.00     40.46     0.00        4     0.00     0.00  MkLiuBoundary::Initialize()
+  0.00     40.46     0.00        4     0.00     0.00  MkLiuBoundary::MkLiuBoundary()
+  0.00     40.46     0.00        4     0.00     0.00  MkPlane::ResetAll()
+  0.00     40.46     0.00        4     0.00     0.00  MkPlane::SetPoints(MkPoint, MkPoint, MkPoint)
+  0.00     40.46     0.00        4     0.00     0.00  MkPlane::MkPlane()
+  0.00     40.46     0.00        4     0.00     0.00  MkDouble::Clear()
+  0.00     40.46     0.00        4     0.00     0.00  MkVector::Initialize(int)
+  0.00     40.46     0.00        4     0.00     0.00  MkVector::Cross(MkVector&, MkVector&)
+  0.00     40.46     0.00        4     0.00     0.00  MkVector::GetSize()
+  0.00     40.46     0.00        4     0.00     0.00  MkVector::SetVector(int)
+  0.00     40.46     0.00        4     0.00     0.00  MkVector::MkVector()
+  0.00     40.46     0.00        3     0.00     0.00  MkLiuParticles::Initialize(int)
+  0.00     40.46     0.00        3     0.00     0.00  MkLiuSPH::GetLiuParam()
+  0.00     40.46     0.00        2     0.00     0.00  MkLiuPairs::MkLiuPairs()
+  0.00     40.46     0.00        2     0.00     0.00  MkLiuPairs::~MkLiuPairs()
+  0.00     40.46     0.00        2     0.00     0.00  MkLiuParticle::GetMass()
+  0.00     40.46     0.00        2     0.00     0.00  MkLiuParticles::MkLiuParticles()
+  0.00     40.46     0.00        2     0.00     0.00  MkLiuParticles::~MkLiuParticles()
+  0.00     40.46     0.00        2     0.00     0.00  MkLiuSPH::SetRhoRef(double)
+  0.00     40.46     0.00        2     0.00     0.00  __gcc_deregister_frame
+  0.00     40.46     0.00        1     0.00     0.02  InitLiuSPH()
+  0.00     40.46     0.00        1     0.00     0.02  densitycheck(int, char**)
+  0.00     40.46     0.00        1     0.00     0.00  initGL()
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::SetSmoothLen(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::Clear()
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::Setup(MkLiuParticles&)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::Update(MkLiuParticles&)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::SetXMax(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::SetXMin(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::SetYMax(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::SetYMin(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::SetZMax(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuGrids::SetZMin(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuKernel::SetKernelType(MkKernelType)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuKernel::SetDim(int)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuBoundarys::Initialize(int)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuParticles::SetColorType(CType)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuSPH::Initialize(int, int, int, int, int)
+  0.00     40.46     0.00        1     0.00     0.01  MkLiuSPH::LowDensity()
+  0.00     40.46     0.00        1     0.00     0.03  MkLiuSPH::Calc_Bnd_Norm()
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuSPH::SetMaxTimeStep(int)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuSPH::GetLiuParticles()
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuSPH::SetDt(double)
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuSPH::Shake()
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuSPH::Output()
+  0.00     40.46     0.00        1     0.00     0.00  MkLiuSPH::SetDim(int)
+  0.00     40.46     0.00        1     0.00     0.03  MkLiuSPH::Calc_Norm()
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.02% of 40.46 seconds
+
+index % time    self  children    called     name
+                0.14   23.80    2002/2002        update() [2]
+[1]     59.2    0.14   23.80    2002         MkLiuSPH::Run() [1]
+                0.03   23.66    2001/2001        MkLiuSPH::Single_Step() [3]
+                0.07    0.00 27462353/3307266707     MkLiuParticles::operator[](int) [6]
+                0.04    0.00 4332000/4332000     MkDouble::operator()(int, int) [37]
+                0.00    0.00    4004/22013       MkDouble::MkDouble(int) [43]
+                0.00    0.00 1444000/306053169     MkDouble::operator()(int) [12]
+                0.00    0.00    6003/24024       MkDouble::~MkDouble() [87]
+                0.00    0.00    2002/2002        MkDouble::MkDouble(int, int) [92]
+                0.00    0.00       1/1           MkLiuSPH::Output() [143]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]     59.2    0.00   23.94                 update() [2]
+                0.14   23.80    2002/2002        MkLiuSPH::Run() [1]
+-----------------------------------------------
+                0.03   23.66    2001/2001        MkLiuSPH::Run() [1]
+[3]     58.5    0.03   23.66    2001         MkLiuSPH::Single_Step() [3]
+                3.69   13.48    2001/2001        MkLiuSPH::Direct_Find() [4]
+                2.06    2.16    2001/2001        MkLiuSPH::Int_Force() [8]
+                0.58    0.50    2001/2001        MkLiuSPH::Art_Visc() [11]
+                0.09    0.51    2001/2001        MkLiuSPH::Direct_Bnd_Find() [13]
+                0.25    0.12    2001/2001        MkLiuSPH::Norm_Bnd_Density() [15]
+                0.07    0.00 31061558/3307266707     MkLiuParticles::operator[](int) [6]
+                0.02    0.05    2001/2001        MkLiuSPH::Ext_Force() [32]
+                0.02    0.03    2001/2001        MkLiuSPH::Art_Bnd_Repel() [36]
+                0.00    0.03    2001/2001        MkLiuSPH::Viscosity() [40]
+-----------------------------------------------
+                3.69   13.48    2001/2001        MkLiuSPH::Single_Step() [3]
+[4]     42.4    3.69   13.48    2001         MkLiuSPH::Direct_Find() [4]
+                3.95    3.73    2001/2001        MkLiuSPH::Pair_Count() [7]
+                2.53    0.00 1061196761/3307266707     MkLiuParticles::operator[](int) [6]
+                0.81    1.69 130024980/137978342     MkLiuKernel::SetSmoothLen(double) [9]
+                0.19    0.00 4341554/4542680     MkLiuKernel::dWdY(double, double, double, double) [17]
+                0.18    0.00 4341554/4542680     MkLiuKernel::dWdZ(double, double, double, double) [18]
+                0.13    0.00 4341554/5265044     MkLiuKernel::W(double) [20]
+                0.12    0.00 4341554/4542680     MkLiuKernel::dWdX(double, double, double, double) [22]
+                0.09    0.00 43415540/235666249     MkLiuPairs::operator[](int) [14]
+                0.01    0.04    2001/4004        MkLiuPairs::Initialize(int) [25]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]     39.8   16.10    0.00                 pow [5]
+-----------------------------------------------
+                0.00    0.00       2/3307266707     InitLiuSPH() [54]
+                0.00    0.00      23/3307266707     MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00      88/3307266707     MkLiuSPH::Calc_Norm() [52]
+                0.00    0.00     722/3307266707     MkLiuSPH::Shake() [64]
+                0.00    0.00    4332/3307266707     MkLiuSPH::LowDensity() [57]
+                0.00    0.00  722361/3307266707     MkLiuParticles::Draw() [26]
+                0.01    0.00 2167083/3307266707     MkLiuSPH::Viscosity() [40]
+                0.01    0.00 5393019/3307266707     MkLiuSPH::Art_Bnd_Repel() [36]
+                0.01    0.00 5778888/3307266707     MkLiuSPH::Pair_Bnd_Count() [21]
+                0.03    0.00 11572552/3307266707     MkLiuSPH::Ext_Force() [32]
+                0.05    0.00 19734419/3307266707     MkLiuSPH::Norm_Bnd_Density() [15]
+                0.05    0.00 20445105/3307266707     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.07    0.00 27462353/3307266707     MkLiuSPH::Run() [1]
+                0.07    0.00 31061558/3307266707     MkLiuSPH::Single_Step() [3]
+                0.37    0.00 156962962/3307266707     MkLiuSPH::Art_Visc() [11]
+                0.97    0.00 404464719/3307266707     MkLiuSPH::Int_Force() [8]
+                2.53    0.00 1061196761/3307266707     MkLiuSPH::Direct_Find() [4]
+                3.73    0.00 1560299760/3307266707     MkLiuSPH::Pair_Count() [7]
+[6]     19.5    7.90    0.00 3307266707         MkLiuParticles::operator[](int) [6]
+-----------------------------------------------
+                3.95    3.73    2001/2001        MkLiuSPH::Direct_Find() [4]
+[7]     19.0    3.95    3.73    2001         MkLiuSPH::Pair_Count() [7]
+                3.73    0.00 1560299760/3307266707     MkLiuParticles::operator[](int) [6]
+-----------------------------------------------
+                2.06    2.16    2001/2001        MkLiuSPH::Single_Step() [3]
+[8]     10.4    2.06    2.16    2001         MkLiuSPH::Int_Force() [8]
+                0.97    0.00 404464719/3307266707     MkLiuParticles::operator[](int) [6]
+                0.61    0.00 304608977/306053169     MkDouble::operator()(int) [12]
+                0.29    0.00 147612836/235666249     MkLiuPairs::operator[](int) [14]
+                0.28    0.00 130246620/137135148     MkLiuPair::DWDX(int) [16]
+                0.01    0.00   16008/22013       MkDouble::MkDouble(int) [43]
+                0.00    0.00  722361/722361      MkLiuSPH::P_art_water(double) [77]
+                0.00    0.00  722361/722361      MkLiuSPH::C_art_water(double) [76]
+                0.00    0.00   16008/24024       MkDouble::~MkDouble() [87]
+-----------------------------------------------
+                0.00    0.00       1/137978342     MkLiuSPH::Initialize(int, int, int, int, int) [69]
+                0.00    0.00       1/137978342     MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/137978342     MkLiuSPH::Calc_Norm() [52]
+                0.00    0.01  722361/137978342     MkLiuSPH::Norm_Bnd_Density() [15]
+                0.02    0.04 2889444/137978342     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.03    0.06 4341554/137978342     MkLiuSPH::Art_Visc() [11]
+                0.81    1.69 130024980/137978342     MkLiuSPH::Direct_Find() [4]
+[9]      6.5    0.86    1.79 137978342         MkLiuKernel::SetSmoothLen(double) [9]
+                1.79    0.00 137978342/137978343     MkLiuKernel::SetupAlphaD() [10]
+-----------------------------------------------
+                0.00    0.00       1/137978343     MkLiuKernel::SetDim(int) [70]
+                1.79    0.00 137978342/137978343     MkLiuKernel::SetSmoothLen(double) [9]
+[10]     4.4    1.79    0.00 137978343         MkLiuKernel::SetupAlphaD() [10]
+-----------------------------------------------
+                0.58    0.50    2001/2001        MkLiuSPH::Single_Step() [3]
+[11]     2.7    0.58    0.50    2001         MkLiuSPH::Art_Visc() [11]
+                0.37    0.00 156962962/3307266707     MkLiuParticles::operator[](int) [6]
+                0.03    0.06 4341554/137978342     MkLiuKernel::SetSmoothLen(double) [9]
+                0.03    0.00 15571636/235666249     MkLiuPairs::operator[](int) [14]
+                0.01    0.00 6888528/137135148     MkLiuPair::DWDX(int) [16]
+-----------------------------------------------
+                0.00    0.00      24/306053169     MkVector::MkVector(double, double, double) [68]
+                0.00    0.00      36/306053169     MkVector::Cross(MkVector&, MkVector&) [66]
+                0.00    0.00      36/306053169     MkVector::operator()(int) [67]
+                0.00    0.00      96/306053169     MkVector::Unify() [65]
+                0.00    0.00 1444000/306053169     MkLiuSPH::Run() [1]
+                0.61    0.00 304608977/306053169     MkLiuSPH::Int_Force() [8]
+[12]     1.5    0.61    0.00 306053169         MkDouble::operator()(int) [12]
+-----------------------------------------------
+                0.09    0.51    2001/2001        MkLiuSPH::Single_Step() [3]
+[13]     1.5    0.09    0.51    2001         MkLiuSPH::Direct_Bnd_Find() [13]
+                0.05    0.09    2001/2001        MkLiuSPH::Pair_Bnd_Count() [21]
+                0.01    0.08 2889444/3090564     MkPlane::GetNearestPoint(MkPoint&) [29]
+                0.06    0.00 2889444/9070572     MkPlane::GetDistance(MkPoint&) [19]
+                0.02    0.04 2889444/137978342     MkLiuKernel::SetSmoothLen(double) [9]
+                0.01    0.04    2001/4004        MkLiuPairs::Initialize(int) [25]
+                0.05    0.00 20445105/3307266707     MkLiuParticles::operator[](int) [6]
+                0.03    0.00 8668332/15436969     MkLiuBoundarys::operator[](int) [34]
+                0.01    0.00 2889444/3090564     MkPoint::operator=(MkPoint const&) [48]
+                0.01    0.00  201120/4542680     MkLiuKernel::dWdY(double, double, double, double) [17]
+                0.01    0.00  201120/4542680     MkLiuKernel::dWdZ(double, double, double, double) [18]
+                0.01    0.00  201120/5265044     MkLiuKernel::W(double) [20]
+                0.01    0.00  201120/4542680     MkLiuKernel::dWdX(double, double, double, double) [22]
+                0.00    0.00 2011200/235666249     MkLiuPairs::operator[](int) [14]
+                0.00    0.00 3611805/7233615     MkLiuBoundarys::GetSize() [72]
+                0.00    0.00    2001/4054        MkPoint::MkPoint() [90]
+-----------------------------------------------
+                0.00    0.00      11/235666249     MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00     102/235666249     MkLiuSPH::Calc_Norm() [52]
+                0.00    0.00  402240/235666249     MkLiuSPH::Art_Bnd_Repel() [36]
+                0.00    0.00 2011200/235666249     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.02    0.00 8683108/235666249     MkLiuSPH::Ext_Force() [32]
+                0.03    0.00 15571636/235666249     MkLiuSPH::Art_Visc() [11]
+                0.04    0.00 17969576/235666249     MkLiuSPH::Norm_Bnd_Density() [15]
+                0.09    0.00 43415540/235666249     MkLiuSPH::Direct_Find() [4]
+                0.29    0.00 147612836/235666249     MkLiuSPH::Int_Force() [8]
+[14]     1.2    0.47    0.00 235666249         MkLiuPairs::operator[](int) [14]
+-----------------------------------------------
+                0.25    0.12    2001/2001        MkLiuSPH::Single_Step() [3]
+[15]     0.9    0.25    0.12    2001         MkLiuSPH::Norm_Bnd_Density() [15]
+                0.05    0.00 19734419/3307266707     MkLiuParticles::operator[](int) [6]
+                0.04    0.00 17969576/235666249     MkLiuPairs::operator[](int) [14]
+                0.02    0.00  722361/5265044     MkLiuKernel::W(double) [20]
+                0.00    0.01  722361/137978342     MkLiuKernel::SetSmoothLen(double) [9]
+                0.00    0.00  201120/15436969     MkLiuBoundarys::operator[](int) [34]
+                0.00    0.00       1/1           MkLiuSPH::Calc_Norm() [52]
+                0.00    0.00       1/1           MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00  923481/923483      MkLiuParticle::GetSmoothLen() [74]
+                0.00    0.00  201120/201120      MkLiuBoundary::GetSmoothLen() [80]
+                0.00    0.00  201120/201120      min(double, double) [79]
+-----------------------------------------------
+                0.01    0.00 6888528/137135148     MkLiuSPH::Art_Visc() [11]
+                0.28    0.00 130246620/137135148     MkLiuSPH::Int_Force() [8]
+[16]     0.7    0.29    0.00 137135148         MkLiuPair::DWDX(int) [16]
+-----------------------------------------------
+                0.00    0.00       6/4542680     MkLiuSPH::Calc_Norm() [52]
+                0.01    0.00  201120/4542680     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.19    0.00 4341554/4542680     MkLiuSPH::Direct_Find() [4]
+[17]     0.5    0.20    0.00 4542680         MkLiuKernel::dWdY(double, double, double, double) [17]
+-----------------------------------------------
+                0.00    0.00       6/4542680     MkLiuSPH::Calc_Norm() [52]
+                0.01    0.00  201120/4542680     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.18    0.00 4341554/4542680     MkLiuSPH::Direct_Find() [4]
+[18]     0.5    0.19    0.00 4542680         MkLiuKernel::dWdZ(double, double, double, double) [18]
+-----------------------------------------------
+                0.00    0.00  201120/9070572     MkLiuSPH::Art_Bnd_Repel() [36]
+                0.06    0.00 2889444/9070572     MkLiuSPH::Pair_Bnd_Count() [21]
+                0.06    0.00 2889444/9070572     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.06    0.00 3090564/9070572     MkPlane::GetNearestPoint(MkPoint&) [29]
+[19]     0.4    0.18    0.00 9070572         MkPlane::GetDistance(MkPoint&) [19]
+-----------------------------------------------
+                0.00    0.00       2/5265044     MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       7/5265044     MkLiuSPH::Calc_Norm() [52]
+                0.01    0.00  201120/5265044     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.02    0.00  722361/5265044     MkLiuSPH::Norm_Bnd_Density() [15]
+                0.13    0.00 4341554/5265044     MkLiuSPH::Direct_Find() [4]
+[20]     0.4    0.15    0.00 5265044         MkLiuKernel::W(double) [20]
+-----------------------------------------------
+                0.05    0.09    2001/2001        MkLiuSPH::Direct_Bnd_Find() [13]
+[21]     0.3    0.05    0.09    2001         MkLiuSPH::Pair_Bnd_Count() [21]
+                0.06    0.00 2889444/9070572     MkPlane::GetDistance(MkPoint&) [19]
+                0.02    0.00 5778888/15436969     MkLiuBoundarys::operator[](int) [34]
+                0.01    0.00 5778888/3307266707     MkLiuParticles::operator[](int) [6]
+                0.00    0.00 3611805/7233615     MkLiuBoundarys::GetSize() [72]
+-----------------------------------------------
+                0.00    0.00       6/4542680     MkLiuSPH::Calc_Norm() [52]
+                0.01    0.00  201120/4542680     MkLiuSPH::Direct_Bnd_Find() [13]
+                0.12    0.00 4341554/4542680     MkLiuSPH::Direct_Find() [4]
+[22]     0.3    0.13    0.00 4542680         MkLiuKernel::dWdX(double, double, double, double) [22]
+-----------------------------------------------
+                0.00    0.11    2001/2001        display() [24]
+[23]     0.3    0.00    0.11    2001         MkLiuSPH::Draw() [23]
+                0.04    0.06    2001/2001        MkLiuParticles::Draw() [26]
+                0.00    0.01    2001/2001        MkLiuBoundarys::Draw() [47]
+-----------------------------------------------
+                                                 <spontaneous>
+[24]     0.3    0.00    0.11                 display() [24]
+                0.00    0.11    2001/2001        MkLiuSPH::Draw() [23]
+-----------------------------------------------
+                0.00    0.00       1/4004        MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/4004        MkLiuSPH::Calc_Norm() [52]
+                0.01    0.04    2001/4004        MkLiuSPH::Direct_Find() [4]
+                0.01    0.04    2001/4004        MkLiuSPH::Direct_Bnd_Find() [13]
+[25]     0.3    0.02    0.09    4004         MkLiuPairs::Initialize(int) [25]
+                0.01    0.08 4546683/4546683     MkLiuPair::MkLiuPair() [30]
+                0.00    0.00    4004/4004        MkLiuPairs::Clear() [91]
+-----------------------------------------------
+                0.04    0.06    2001/2001        MkLiuSPH::Draw() [23]
+[26]     0.3    0.04    0.06    2001         MkLiuParticles::Draw() [26]
+                0.03    0.03  722361/722361      MkLiuParticle::Draw() [33]
+                0.00    0.00  722361/3307266707     MkLiuParticles::operator[](int) [6]
+-----------------------------------------------
+                                                 <spontaneous>
+[27]     0.2    0.10    0.00                 __fpclassify [27]
+-----------------------------------------------
+                                                 <spontaneous>
+[28]     0.2    0.10    0.00                 ldexp [28]
+-----------------------------------------------
+                0.00    0.01  201120/3090564     MkLiuSPH::Art_Bnd_Repel() [36]
+                0.01    0.08 2889444/3090564     MkLiuSPH::Direct_Bnd_Find() [13]
+[29]     0.2    0.01    0.08 3090564         MkPlane::GetNearestPoint(MkPoint&) [29]
+                0.06    0.00 3090564/9070572     MkPlane::GetDistance(MkPoint&) [19]
+                0.02    0.00 3090564/3122600     MkPoint::MkPoint(double, double, double) [41]
+-----------------------------------------------
+                0.01    0.08 4546683/4546683     MkLiuPairs::Initialize(int) [25]
+[30]     0.2    0.01    0.08 4546683         MkLiuPair::MkLiuPair() [30]
+                0.08    0.00 4546683/4546683     MkLiuPair::Clear() [31]
+-----------------------------------------------
+                0.08    0.00 4546683/4546683     MkLiuPair::MkLiuPair() [30]
+[31]     0.2    0.08    0.00 4546683         MkLiuPair::Clear() [31]
+-----------------------------------------------
+                0.02    0.05    2001/2001        MkLiuSPH::Single_Step() [3]
+[32]     0.2    0.02    0.05    2001         MkLiuSPH::Ext_Force() [32]
+                0.03    0.00 11572552/3307266707     MkLiuParticles::operator[](int) [6]
+                0.02    0.00 8683108/235666249     MkLiuPairs::operator[](int) [14]
+                0.00    0.00    2001/22013       MkDouble::MkDouble(int) [43]
+                0.00    0.00    2001/24024       MkDouble::~MkDouble() [87]
+-----------------------------------------------
+                0.03    0.03  722361/722361      MkLiuParticles::Draw() [26]
+[33]     0.1    0.03    0.03  722361         MkLiuParticle::Draw() [33]
+                0.03    0.00  722361/722361      MkLiuParticle::SetupColor() [39]
+-----------------------------------------------
+                0.00    0.00       4/15436969     InitLiuSPH() [54]
+                0.00    0.00  201120/15436969     MkLiuSPH::Norm_Bnd_Density() [15]
+                0.00    0.00  788625/15436969     MkLiuSPH::Art_Bnd_Repel() [36]
+                0.02    0.00 5778888/15436969     MkLiuSPH::Pair_Bnd_Count() [21]
+                0.03    0.00 8668332/15436969     MkLiuSPH::Direct_Bnd_Find() [13]
+[34]     0.1    0.05    0.00 15436969         MkLiuBoundarys::operator[](int) [34]
+-----------------------------------------------
+                                                 <spontaneous>
+[35]     0.1    0.05    0.00                 floor [35]
+-----------------------------------------------
+                0.02    0.03    2001/2001        MkLiuSPH::Single_Step() [3]
+[36]     0.1    0.02    0.03    2001         MkLiuSPH::Art_Bnd_Repel() [36]
+                0.01    0.00 5393019/3307266707     MkLiuParticles::operator[](int) [6]
+                0.00    0.01  201120/3090564     MkPlane::GetNearestPoint(MkPoint&) [29]
+                0.00    0.00  201120/9070572     MkPlane::GetDistance(MkPoint&) [19]
+                0.00    0.00  788625/15436969     MkLiuBoundarys::operator[](int) [34]
+                0.00    0.00  402240/235666249     MkLiuPairs::operator[](int) [14]
+                0.00    0.00  201120/3090564     MkPoint::operator=(MkPoint const&) [48]
+                0.00    0.00    2001/4054        MkPoint::MkPoint() [90]
+-----------------------------------------------
+                0.04    0.00 4332000/4332000     MkLiuSPH::Run() [1]
+[37]     0.1    0.04    0.00 4332000         MkDouble::operator()(int, int) [37]
+-----------------------------------------------
+                                                 <spontaneous>
+[38]     0.1    0.04    0.00                 MkLiuKernel::MkLiuKernel(MkKernelType, int, double) [38]
+-----------------------------------------------
+                0.03    0.00  722361/722361      MkLiuParticle::Draw() [33]
+[39]     0.1    0.03    0.00  722361         MkLiuParticle::SetupColor() [39]
+-----------------------------------------------
+                0.00    0.03    2001/2001        MkLiuSPH::Single_Step() [3]
+[40]     0.1    0.00    0.03    2001         MkLiuSPH::Viscosity() [40]
+                0.02    0.00 1444722/1444722     MkLiuParticle::GetParticleType() [42]
+                0.01    0.00 2167083/3307266707     MkLiuParticles::operator[](int) [6]
+                0.00    0.00  722361/722361      MkLiuParticle::SetEta(double) [75]
+-----------------------------------------------
+                0.00    0.00       8/3122600     MkPlane::CalcABCD() [58]
+                0.00    0.00      12/3122600     InitLiuSPH() [54]
+                0.00    0.00   32016/3122600     MkPlane::ApplyMatrix() [46]
+                0.02    0.00 3090564/3122600     MkPlane::GetNearestPoint(MkPoint&) [29]
+[41]     0.0    0.02    0.00 3122600         MkPoint::MkPoint(double, double, double) [41]
+-----------------------------------------------
+                0.02    0.00 1444722/1444722     MkLiuSPH::Viscosity() [40]
+[42]     0.0    0.02    0.00 1444722         MkLiuParticle::GetParticleType() [42]
+-----------------------------------------------
+                0.00    0.00    2001/22013       MkLiuSPH::Ext_Force() [32]
+                0.00    0.00    4004/22013       MkLiuSPH::Run() [1]
+                0.01    0.00   16008/22013       MkLiuSPH::Int_Force() [8]
+[43]     0.0    0.02    0.00   22013         MkDouble::MkDouble(int) [43]
+-----------------------------------------------
+                                                 <spontaneous>
+[44]     0.0    0.02    0.00                 frexp [44]
+-----------------------------------------------
+                0.00    0.01    8004/8004        MkLiuBoundarys::Draw() [47]
+[45]     0.0    0.00    0.01    8004         MkLiuBoundary::Draw() [45]
+                0.00    0.01    8004/8004        MkPlane::ApplyMatrix() [46]
+-----------------------------------------------
+                0.00    0.01    8004/8004        MkLiuBoundary::Draw() [45]
+[46]     0.0    0.00    0.01    8004         MkPlane::ApplyMatrix() [46]
+                0.00    0.01    8004/8012        MkMatrix4::Rotate(double, double, double) [50]
+                0.00    0.00    8004/8004        MkMatrix4::Scale(double, double, double) [51]
+                0.00    0.00   32016/3122600     MkPoint::MkPoint(double, double, double) [41]
+                0.00    0.00   32016/32024       operator*(MkPoint&, MkMatrix4&) [86]
+                0.00    0.00   32016/64048       MkPoint::operator=(MkPoint&) [81]
+                0.00    0.00    8004/40044       MkMatrix4::MkMatrix4() [85]
+                0.00    0.00    8004/56068       MkMatrix4::Identity() [82]
+                0.00    0.00    8004/8004        MkMatrix4::Translate(double, double, double) [88]
+-----------------------------------------------
+                0.00    0.01    2001/2001        MkLiuSPH::Draw() [23]
+[47]     0.0    0.00    0.01    2001         MkLiuBoundarys::Draw() [47]
+                0.00    0.01    8004/8004        MkLiuBoundary::Draw() [45]
+                0.00    0.00   10005/7233615     MkLiuBoundarys::GetSize() [72]
+-----------------------------------------------
+                0.00    0.00  201120/3090564     MkLiuSPH::Art_Bnd_Repel() [36]
+                0.01    0.00 2889444/3090564     MkLiuSPH::Direct_Bnd_Find() [13]
+[48]     0.0    0.01    0.00 3090564         MkPoint::operator=(MkPoint const&) [48]
+-----------------------------------------------
+                0.00    0.00    8004/40052       MkMatrix4::Scale(double, double, double) [51]
+                0.01    0.00   32048/40052       MkMatrix4::Rotate(double, double, double) [50]
+[49]     0.0    0.01    0.00   40052         MkMatrix4::operator*=(MkMatrix4&) [49]
+                0.00    0.00   40052/48056       MkMatrix4::Clear() [83]
+                0.00    0.00   40052/48056       MkMatrix4::operator=(MkMatrix4&) [84]
+-----------------------------------------------
+                0.00    0.00       8/8012        MkPlane::CalcABCD() [58]
+                0.00    0.01    8004/8012        MkPlane::ApplyMatrix() [46]
+[50]     0.0    0.00    0.01    8012         MkMatrix4::Rotate(double, double, double) [50]
+                0.01    0.00   32048/40052       MkMatrix4::operator*=(MkMatrix4&) [49]
+                0.00    0.00   32048/56068       MkMatrix4::Identity() [82]
+                0.00    0.00   16024/40044       MkMatrix4::MkMatrix4() [85]
+-----------------------------------------------
+                0.00    0.00    8004/8004        MkPlane::ApplyMatrix() [46]
+[51]     0.0    0.00    0.00    8004         MkMatrix4::Scale(double, double, double) [51]
+                0.00    0.00    8004/40052       MkMatrix4::operator*=(MkMatrix4&) [49]
+                0.00    0.00    8004/40044       MkMatrix4::MkMatrix4() [85]
+                0.00    0.00    8004/56068       MkMatrix4::Identity() [82]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuSPH::Norm_Bnd_Density() [15]
+[52]     0.0    0.00    0.00       1         MkLiuSPH::Calc_Norm() [52]
+                0.00    0.00       1/4004        MkLiuPairs::Initialize(int) [25]
+                0.00    0.00       6/4542680     MkLiuKernel::dWdY(double, double, double, double) [17]
+                0.00    0.00       6/4542680     MkLiuKernel::dWdZ(double, double, double, double) [18]
+                0.00    0.00      88/3307266707     MkLiuParticles::operator[](int) [6]
+                0.00    0.00       7/5265044     MkLiuKernel::W(double) [20]
+                0.00    0.00     102/235666249     MkLiuPairs::operator[](int) [14]
+                0.00    0.00       6/4542680     MkLiuKernel::dWdX(double, double, double, double) [22]
+                0.00    0.00       1/137978342     MkLiuKernel::SetSmoothLen(double) [9]
+                0.00    0.00       1/923483      MkLiuParticle::GetSmoothLen() [74]
+                0.00    0.00       1/2           MkLiuParticle::GetMass() [122]
+                0.00    0.00       1/2           MkLiuParticles::MkLiuParticles() [123]
+                0.00    0.00       1/2           MkLiuPairs::MkLiuPairs() [120]
+                0.00    0.00       1/3           MkLiuParticles::Initialize(int) [118]
+                0.00    0.00       1/2           MkLiuPairs::~MkLiuPairs() [121]
+                0.00    0.00       1/2           MkLiuParticles::~MkLiuParticles() [124]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuSPH::Norm_Bnd_Density() [15]
+[53]     0.0    0.00    0.00       1         MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/4004        MkLiuPairs::Initialize(int) [25]
+                0.00    0.00       2/5265044     MkLiuKernel::W(double) [20]
+                0.00    0.00      23/3307266707     MkLiuParticles::operator[](int) [6]
+                0.00    0.00      11/235666249     MkLiuPairs::operator[](int) [14]
+                0.00    0.00       1/137978342     MkLiuKernel::SetSmoothLen(double) [9]
+                0.00    0.00       1/923483      MkLiuParticle::GetSmoothLen() [74]
+                0.00    0.00       1/2           MkLiuParticle::GetMass() [122]
+                0.00    0.00       1/2           MkLiuParticles::MkLiuParticles() [123]
+                0.00    0.00       1/2           MkLiuPairs::MkLiuPairs() [120]
+                0.00    0.00       1/3           MkLiuParticles::Initialize(int) [118]
+                0.00    0.00       1/2           MkLiuPairs::~MkLiuPairs() [121]
+                0.00    0.00       1/2           MkLiuParticles::~MkLiuParticles() [124]
+-----------------------------------------------
+                0.00    0.00       1/1           densitycheck(int, char**) [55]
+[54]     0.0    0.00    0.00       1         InitLiuSPH() [54]
+                0.00    0.00       1/1           MkLiuSPH::LowDensity() [57]
+                0.00    0.00       4/4           MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+                0.00    0.00       1/1           MkLiuBoundarys::Initialize(int) [63]
+                0.00    0.00       1/1           MkLiuSPH::Shake() [64]
+                0.00    0.00      12/3122600     MkPoint::MkPoint(double, double, double) [41]
+                0.00    0.00       1/1           MkLiuSPH::Initialize(int, int, int, int, int) [69]
+                0.00    0.00       4/15436969     MkLiuBoundarys::operator[](int) [34]
+                0.00    0.00       2/3307266707     MkLiuParticles::operator[](int) [6]
+                0.00    0.00       3/3           MkLiuSPH::GetLiuParam() [119]
+                0.00    0.00       2/2           MkLiuSPH::SetRhoRef(double) [125]
+                0.00    0.00       1/1           MkLiuGrids::SetXMin(double) [133]
+                0.00    0.00       1/1           MkLiuGrids::SetYMin(double) [135]
+                0.00    0.00       1/1           MkLiuGrids::SetZMin(double) [137]
+                0.00    0.00       1/1           MkLiuGrids::SetXMax(double) [132]
+                0.00    0.00       1/1           MkLiuGrids::SetYMax(double) [134]
+                0.00    0.00       1/1           MkLiuGrids::SetZMax(double) [136]
+                0.00    0.00       1/1           MkLiuSPH::SetDt(double) [142]
+                0.00    0.00       1/1           MkLiuSPH::SetDim(int) [144]
+                0.00    0.00       1/1           MkLiuSPH::SetMaxTimeStep(int) [140]
+                0.00    0.00       1/1           MkLiuParticles::SetColorType(CType) [139]
+                0.00    0.00       1/1           MkLiuSPH::GetLiuParticles() [141]
+-----------------------------------------------
+                0.00    0.00       1/1           main [56]
+[55]     0.0    0.00    0.00       1         densitycheck(int, char**) [55]
+                0.00    0.00       1/1           InitLiuSPH() [54]
+                0.00    0.00       2/2           __gcc_deregister_frame [126]
+                0.00    0.00       1/1           initGL() [127]
+-----------------------------------------------
+                                                 <spontaneous>
+[56]     0.0    0.00    0.00                 main [56]
+                0.00    0.00       1/1           densitycheck(int, char**) [55]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[57]     0.0    0.00    0.00       1         MkLiuSPH::LowDensity() [57]
+                0.00    0.00    4332/3307266707     MkLiuParticles::operator[](int) [6]
+                0.00    0.00       1/1           MkLiuGrids::SetSmoothLen(double) [128]
+                0.00    0.00       1/1           MkLiuGrids::Setup(MkLiuParticles&) [130]
+-----------------------------------------------
+                0.00    0.00       4/8           MkPlane::MkPlane() [62]
+                0.00    0.00       4/8           MkPlane::ResetAll() [61]
+[58]     0.0    0.00    0.00       8         MkPlane::CalcABCD() [58]
+                0.00    0.00       8/8012        MkMatrix4::Rotate(double, double, double) [50]
+                0.00    0.00       8/3122600     MkPoint::MkPoint(double, double, double) [41]
+                0.00    0.00       8/40044       MkMatrix4::MkMatrix4() [85]
+                0.00    0.00       8/56068       MkMatrix4::Identity() [82]
+                0.00    0.00       8/32024       operator*(MkPoint&, MkMatrix4&) [86]
+                0.00    0.00       8/64048       MkPoint::operator=(MkPoint&) [81]
+                0.00    0.00       8/8           MkPoint::Unify() [111]
+-----------------------------------------------
+                0.00    0.00       4/4           InitLiuSPH() [54]
+[59]     0.0    0.00    0.00       4         MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+                0.00    0.00       4/4           MkPlane::ResetAll() [61]
+                0.00    0.00       8/8           MkVector::Unify() [65]
+                0.00    0.00       4/4           MkVector::Cross(MkVector&, MkVector&) [66]
+                0.00    0.00       8/8           MkVector::MkVector(double, double, double) [68]
+                0.00    0.00      12/36          MkVector::operator()(int) [67]
+                0.00    0.00      12/12          MkVector::~MkVector() [109]
+                0.00    0.00       4/4           MkVector::MkVector() [117]
+                0.00    0.00       4/12          MkPoint::Set(double, double, double) [106]
+-----------------------------------------------
+                0.00    0.00       4/4           MkLiuBoundarys::Initialize(int) [63]
+[60]     0.0    0.00    0.00       4         MkLiuBoundary::MkLiuBoundary() [60]
+                0.00    0.00       4/4           MkPlane::MkPlane() [62]
+                0.00    0.00       4/4           MkLiuBoundary::Initialize() [112]
+-----------------------------------------------
+                0.00    0.00       4/4           MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+[61]     0.0    0.00    0.00       4         MkPlane::ResetAll() [61]
+                0.00    0.00       4/8           MkPlane::CalcABCD() [58]
+                0.00    0.00       4/12          MkPoint::Set(double, double, double) [106]
+-----------------------------------------------
+                0.00    0.00       4/4           MkLiuBoundary::MkLiuBoundary() [60]
+[62]     0.0    0.00    0.00       4         MkPlane::MkPlane() [62]
+                0.00    0.00       4/8           MkPlane::CalcABCD() [58]
+                0.00    0.00      20/4054        MkPoint::MkPoint() [90]
+                0.00    0.00      16/16          MkLine::MkLine() [105]
+                0.00    0.00       4/20          MkShape::MkShape() [104]
+                0.00    0.00       4/12          MkPoint::Set(double, double, double) [106]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[63]     0.0    0.00    0.00       1         MkLiuBoundarys::Initialize(int) [63]
+                0.00    0.00       4/4           MkLiuBoundary::MkLiuBoundary() [60]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[64]     0.0    0.00    0.00       1         MkLiuSPH::Shake() [64]
+                0.00    0.00     722/3307266707     MkLiuParticles::operator[](int) [6]
+-----------------------------------------------
+                0.00    0.00       8/8           MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+[65]     0.0    0.00    0.00       8         MkVector::Unify() [65]
+                0.00    0.00      96/306053169     MkDouble::operator()(int) [12]
+-----------------------------------------------
+                0.00    0.00       4/4           MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+[66]     0.0    0.00    0.00       4         MkVector::Cross(MkVector&, MkVector&) [66]
+                0.00    0.00      36/306053169     MkDouble::operator()(int) [12]
+                0.00    0.00      24/36          MkVector::operator()(int) [67]
+                0.00    0.00       4/4           MkVector::GetSize() [115]
+                0.00    0.00       4/4           MkVector::Initialize(int) [114]
+-----------------------------------------------
+                0.00    0.00      12/36          MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+                0.00    0.00      24/36          MkVector::Cross(MkVector&, MkVector&) [66]
+[67]     0.0    0.00    0.00      36         MkVector::operator()(int) [67]
+                0.00    0.00      36/306053169     MkDouble::operator()(int) [12]
+-----------------------------------------------
+                0.00    0.00       8/8           MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+[68]     0.0    0.00    0.00       8         MkVector::MkVector(double, double, double) [68]
+                0.00    0.00      24/306053169     MkDouble::operator()(int) [12]
+                0.00    0.00       8/12          MkDouble::MkDouble() [108]
+                0.00    0.00       8/12          MkDouble::Initialize(int) [107]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[69]     0.0    0.00    0.00       1         MkLiuSPH::Initialize(int, int, int, int, int) [69]
+                0.00    0.00       1/137978342     MkLiuKernel::SetSmoothLen(double) [9]
+                0.00    0.00       1/1           MkLiuKernel::SetDim(int) [70]
+                0.00    0.00       1/3           MkLiuParticles::Initialize(int) [118]
+                0.00    0.00       1/1           MkLiuKernel::SetKernelType(MkKernelType) [138]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuSPH::Initialize(int, int, int, int, int) [69]
+[70]     0.0    0.00    0.00       1         MkLiuKernel::SetDim(int) [70]
+                0.00    0.00       1/137978343     MkLiuKernel::SetupAlphaD() [10]
+-----------------------------------------------
+                0.00    0.00   10005/7233615     MkLiuBoundarys::Draw() [47]
+                0.00    0.00 3611805/7233615     MkLiuSPH::Pair_Bnd_Count() [21]
+                0.00    0.00 3611805/7233615     MkLiuSPH::Direct_Bnd_Find() [13]
+[72]     0.0    0.00    0.00 7233615         MkLiuBoundarys::GetSize() [72]
+-----------------------------------------------
+                0.00    0.00       7/4544409     MkLiuPairs::~MkLiuPairs() [121]
+                0.00    0.00 4544402/4544409     MkLiuPairs::Clear() [91]
+[73]     0.0    0.00    0.00 4544409         MkLiuPair::~MkLiuPair() [73]
+-----------------------------------------------
+                0.00    0.00       1/923483      MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/923483      MkLiuSPH::Calc_Norm() [52]
+                0.00    0.00  923481/923483      MkLiuSPH::Norm_Bnd_Density() [15]
+[74]     0.0    0.00    0.00  923483         MkLiuParticle::GetSmoothLen() [74]
+-----------------------------------------------
+                0.00    0.00  722361/722361      MkLiuSPH::Viscosity() [40]
+[75]     0.0    0.00    0.00  722361         MkLiuParticle::SetEta(double) [75]
+-----------------------------------------------
+                0.00    0.00  722361/722361      MkLiuSPH::Int_Force() [8]
+[76]     0.0    0.00    0.00  722361         MkLiuSPH::C_art_water(double) [76]
+-----------------------------------------------
+                0.00    0.00  722361/722361      MkLiuSPH::Int_Force() [8]
+[77]     0.0    0.00    0.00  722361         MkLiuSPH::P_art_water(double) [77]
+-----------------------------------------------
+                0.00    0.00  384288/384288      operator*(MkPoint&, MkMatrix4&) [86]
+[78]     0.0    0.00    0.00  384288         MkMatrix4::operator()(int, int) [78]
+-----------------------------------------------
+                0.00    0.00  201120/201120      MkLiuSPH::Norm_Bnd_Density() [15]
+[79]     0.0    0.00    0.00  201120         min(double, double) [79]
+-----------------------------------------------
+                0.00    0.00  201120/201120      MkLiuSPH::Norm_Bnd_Density() [15]
+[80]     0.0    0.00    0.00  201120         MkLiuBoundary::GetSmoothLen() [80]
+-----------------------------------------------
+                0.00    0.00       8/64048       MkPlane::CalcABCD() [58]
+                0.00    0.00   32016/64048       MkPlane::ApplyMatrix() [46]
+                0.00    0.00   32024/64048       operator*(MkPoint&, MkMatrix4&) [86]
+[81]     0.0    0.00    0.00   64048         MkPoint::operator=(MkPoint&) [81]
+-----------------------------------------------
+                0.00    0.00       8/56068       MkPlane::CalcABCD() [58]
+                0.00    0.00    8004/56068       MkPlane::ApplyMatrix() [46]
+                0.00    0.00    8004/56068       MkMatrix4::Translate(double, double, double) [88]
+                0.00    0.00    8004/56068       MkMatrix4::Scale(double, double, double) [51]
+                0.00    0.00   32048/56068       MkMatrix4::Rotate(double, double, double) [50]
+[82]     0.0    0.00    0.00   56068         MkMatrix4::Identity() [82]
+-----------------------------------------------
+                0.00    0.00    8004/48056       operator*(MkMatrix4&, MkMatrix4&) [89]
+                0.00    0.00   40052/48056       MkMatrix4::operator*=(MkMatrix4&) [49]
+[83]     0.0    0.00    0.00   48056         MkMatrix4::Clear() [83]
+-----------------------------------------------
+                0.00    0.00    8004/48056       MkMatrix4::Translate(double, double, double) [88]
+                0.00    0.00   40052/48056       MkMatrix4::operator*=(MkMatrix4&) [49]
+[84]     0.0    0.00    0.00   48056         MkMatrix4::operator=(MkMatrix4&) [84]
+-----------------------------------------------
+                0.00    0.00       8/40044       MkPlane::CalcABCD() [58]
+                0.00    0.00    8004/40044       MkPlane::ApplyMatrix() [46]
+                0.00    0.00    8004/40044       MkMatrix4::Translate(double, double, double) [88]
+                0.00    0.00    8004/40044       MkMatrix4::Scale(double, double, double) [51]
+                0.00    0.00   16024/40044       MkMatrix4::Rotate(double, double, double) [50]
+[85]     0.0    0.00    0.00   40044         MkMatrix4::MkMatrix4() [85]
+-----------------------------------------------
+                0.00    0.00       8/32024       MkPlane::CalcABCD() [58]
+                0.00    0.00   32016/32024       MkPlane::ApplyMatrix() [46]
+[86]     0.0    0.00    0.00   32024         operator*(MkPoint&, MkMatrix4&) [86]
+                0.00    0.00  384288/384288      MkMatrix4::operator()(int, int) [78]
+                0.00    0.00   32024/64048       MkPoint::operator=(MkPoint&) [81]
+-----------------------------------------------
+                0.00    0.00      12/24024       MkVector::~MkVector() [109]
+                0.00    0.00    2001/24024       MkLiuSPH::Ext_Force() [32]
+                0.00    0.00    6003/24024       MkLiuSPH::Run() [1]
+                0.00    0.00   16008/24024       MkLiuSPH::Int_Force() [8]
+[87]     0.0    0.00    0.00   24024         MkDouble::~MkDouble() [87]
+-----------------------------------------------
+                0.00    0.00    8004/8004        MkPlane::ApplyMatrix() [46]
+[88]     0.0    0.00    0.00    8004         MkMatrix4::Translate(double, double, double) [88]
+                0.00    0.00    8004/40044       MkMatrix4::MkMatrix4() [85]
+                0.00    0.00    8004/56068       MkMatrix4::Identity() [82]
+                0.00    0.00    8004/8004        operator*(MkMatrix4&, MkMatrix4&) [89]
+                0.00    0.00    8004/48056       MkMatrix4::operator=(MkMatrix4&) [84]
+-----------------------------------------------
+                0.00    0.00    8004/8004        MkMatrix4::Translate(double, double, double) [88]
+[89]     0.0    0.00    0.00    8004         operator*(MkMatrix4&, MkMatrix4&) [89]
+                0.00    0.00    8004/48056       MkMatrix4::Clear() [83]
+-----------------------------------------------
+                0.00    0.00      20/4054        MkPlane::MkPlane() [62]
+                0.00    0.00      32/4054        MkLine::MkLine() [105]
+                0.00    0.00    2001/4054        MkLiuSPH::Art_Bnd_Repel() [36]
+                0.00    0.00    2001/4054        MkLiuSPH::Direct_Bnd_Find() [13]
+[90]     0.0    0.00    0.00    4054         MkPoint::MkPoint() [90]
+-----------------------------------------------
+                0.00    0.00    4004/4004        MkLiuPairs::Initialize(int) [25]
+[91]     0.0    0.00    0.00    4004         MkLiuPairs::Clear() [91]
+                0.00    0.00 4544402/4544409     MkLiuPair::~MkLiuPair() [73]
+-----------------------------------------------
+                0.00    0.00    2002/2002        MkLiuSPH::Run() [1]
+[92]     0.0    0.00    0.00    2002         MkDouble::MkDouble(int, int) [92]
+-----------------------------------------------
+                0.00    0.00     400/400         MkLiuGrids::Setup(MkLiuParticles&) [130]
+[93]     0.0    0.00    0.00     400         MkLiuGrids::operator()(int, int, int) [93]
+-----------------------------------------------
+                0.00    0.00     400/400         MkLiuGrid::Initialize() [96]
+[94]     0.0    0.00    0.00     400         MkInt::Clear() [94]
+-----------------------------------------------
+                0.00    0.00     400/400         MkLiuGrid::MkLiuGrid() [98]
+[95]     0.0    0.00    0.00     400         MkInt::MkInt() [95]
+-----------------------------------------------
+                0.00    0.00     400/400         MkLiuGrid::MkLiuGrid() [98]
+[96]     0.0    0.00    0.00     400         MkLiuGrid::Initialize() [96]
+                0.00    0.00     400/400         MkInt::Clear() [94]
+-----------------------------------------------
+                0.00    0.00     400/400         MkLiuGrids::Setup(MkLiuParticles&) [130]
+[97]     0.0    0.00    0.00     400         MkLiuGrid::Setup(float, float, float, float, float, float) [97]
+-----------------------------------------------
+                0.00    0.00     400/400         MkLiuGrids::Setup(MkLiuParticles&) [130]
+[98]     0.0    0.00    0.00     400         MkLiuGrid::MkLiuGrid() [98]
+                0.00    0.00     400/400         MkInt::MkInt() [95]
+                0.00    0.00     400/400         MkLiuGrid::Initialize() [96]
+-----------------------------------------------
+                0.00    0.00     372/372         MkLiuParticle::MkLiuParticle() [100]
+[99]     0.0    0.00    0.00     372         MkLiuParticle::Initialize() [99]
+-----------------------------------------------
+                0.00    0.00       2/372         MkLiuParticles::MkLiuParticles() [123]
+                0.00    0.00     370/372         MkLiuParticles::Initialize(int) [118]
+[100]    0.0    0.00    0.00     372         MkLiuParticle::MkLiuParticle() [100]
+                0.00    0.00     372/372         MkPoint::MkPoint() [101]
+                0.00    0.00     372/372         MkLiuParticle::Initialize() [99]
+-----------------------------------------------
+                0.00    0.00     372/372         MkLiuParticle::MkLiuParticle() [100]
+[101]    0.0    0.00    0.00     372         MkPoint::MkPoint() [101]
+-----------------------------------------------
+                0.00    0.00     362/362         MkLiuGrids::Update(MkLiuParticles&) [131]
+[102]    0.0    0.00    0.00     362         MkLiuParticles::GetSize() [102]
+-----------------------------------------------
+                0.00    0.00     361/361         MkLiuParticles::SetColorType(CType) [139]
+[103]    0.0    0.00    0.00     361         MkLiuParticle::SetColorType(CType) [103]
+-----------------------------------------------
+                0.00    0.00       4/20          MkPlane::MkPlane() [62]
+                0.00    0.00      16/20          MkLine::MkLine() [105]
+[104]    0.0    0.00    0.00      20         MkShape::MkShape() [104]
+-----------------------------------------------
+                0.00    0.00      16/16          MkPlane::MkPlane() [62]
+[105]    0.0    0.00    0.00      16         MkLine::MkLine() [105]
+                0.00    0.00      32/4054        MkPoint::MkPoint() [90]
+                0.00    0.00      16/20          MkShape::MkShape() [104]
+-----------------------------------------------
+                0.00    0.00       4/12          MkPlane::MkPlane() [62]
+                0.00    0.00       4/12          MkPlane::ResetAll() [61]
+                0.00    0.00       4/12          MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+[106]    0.0    0.00    0.00      12         MkPoint::Set(double, double, double) [106]
+-----------------------------------------------
+                0.00    0.00       4/12          MkVector::SetVector(int) [116]
+                0.00    0.00       8/12          MkVector::MkVector(double, double, double) [68]
+[107]    0.0    0.00    0.00      12         MkDouble::Initialize(int) [107]
+-----------------------------------------------
+                0.00    0.00       4/12          MkVector::MkVector() [117]
+                0.00    0.00       8/12          MkVector::MkVector(double, double, double) [68]
+[108]    0.0    0.00    0.00      12         MkDouble::MkDouble() [108]
+-----------------------------------------------
+                0.00    0.00      12/12          MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+[109]    0.0    0.00    0.00      12         MkVector::~MkVector() [109]
+                0.00    0.00      12/24024       MkDouble::~MkDouble() [87]
+-----------------------------------------------
+                0.00    0.00      11/11          MkLiuParticles::~MkLiuParticles() [124]
+[110]    0.0    0.00    0.00      11         MkLiuParticle::~MkLiuParticle() [110]
+-----------------------------------------------
+                0.00    0.00       8/8           MkPlane::CalcABCD() [58]
+[111]    0.0    0.00    0.00       8         MkPoint::Unify() [111]
+-----------------------------------------------
+                0.00    0.00       4/4           MkLiuBoundary::MkLiuBoundary() [60]
+[112]    0.0    0.00    0.00       4         MkLiuBoundary::Initialize() [112]
+-----------------------------------------------
+                0.00    0.00       4/4           MkVector::MkVector() [117]
+[113]    0.0    0.00    0.00       4         MkDouble::Clear() [113]
+-----------------------------------------------
+                0.00    0.00       4/4           MkVector::Cross(MkVector&, MkVector&) [66]
+[114]    0.0    0.00    0.00       4         MkVector::Initialize(int) [114]
+                0.00    0.00       4/4           MkVector::SetVector(int) [116]
+-----------------------------------------------
+                0.00    0.00       4/4           MkVector::Cross(MkVector&, MkVector&) [66]
+[115]    0.0    0.00    0.00       4         MkVector::GetSize() [115]
+-----------------------------------------------
+                0.00    0.00       4/4           MkVector::Initialize(int) [114]
+[116]    0.0    0.00    0.00       4         MkVector::SetVector(int) [116]
+                0.00    0.00       4/12          MkDouble::Initialize(int) [107]
+-----------------------------------------------
+                0.00    0.00       4/4           MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [59]
+[117]    0.0    0.00    0.00       4         MkVector::MkVector() [117]
+                0.00    0.00       4/12          MkDouble::MkDouble() [108]
+                0.00    0.00       4/4           MkDouble::Clear() [113]
+-----------------------------------------------
+                0.00    0.00       1/3           MkLiuSPH::Initialize(int, int, int, int, int) [69]
+                0.00    0.00       1/3           MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/3           MkLiuSPH::Calc_Norm() [52]
+[118]    0.0    0.00    0.00       3         MkLiuParticles::Initialize(int) [118]
+                0.00    0.00     370/372         MkLiuParticle::MkLiuParticle() [100]
+-----------------------------------------------
+                0.00    0.00       3/3           InitLiuSPH() [54]
+[119]    0.0    0.00    0.00       3         MkLiuSPH::GetLiuParam() [119]
+-----------------------------------------------
+                0.00    0.00       1/2           MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/2           MkLiuSPH::Calc_Norm() [52]
+[120]    0.0    0.00    0.00       2         MkLiuPairs::MkLiuPairs() [120]
+-----------------------------------------------
+                0.00    0.00       1/2           MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/2           MkLiuSPH::Calc_Norm() [52]
+[121]    0.0    0.00    0.00       2         MkLiuPairs::~MkLiuPairs() [121]
+                0.00    0.00       7/4544409     MkLiuPair::~MkLiuPair() [73]
+-----------------------------------------------
+                0.00    0.00       1/2           MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/2           MkLiuSPH::Calc_Norm() [52]
+[122]    0.0    0.00    0.00       2         MkLiuParticle::GetMass() [122]
+-----------------------------------------------
+                0.00    0.00       1/2           MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/2           MkLiuSPH::Calc_Norm() [52]
+[123]    0.0    0.00    0.00       2         MkLiuParticles::MkLiuParticles() [123]
+                0.00    0.00       2/372         MkLiuParticle::MkLiuParticle() [100]
+-----------------------------------------------
+                0.00    0.00       1/2           MkLiuSPH::Calc_Bnd_Norm() [53]
+                0.00    0.00       1/2           MkLiuSPH::Calc_Norm() [52]
+[124]    0.0    0.00    0.00       2         MkLiuParticles::~MkLiuParticles() [124]
+                0.00    0.00      11/11          MkLiuParticle::~MkLiuParticle() [110]
+-----------------------------------------------
+                0.00    0.00       2/2           InitLiuSPH() [54]
+[125]    0.0    0.00    0.00       2         MkLiuSPH::SetRhoRef(double) [125]
+-----------------------------------------------
+                0.00    0.00       2/2           densitycheck(int, char**) [55]
+[126]    0.0    0.00    0.00       2         __gcc_deregister_frame [126]
+-----------------------------------------------
+                0.00    0.00       1/1           densitycheck(int, char**) [55]
+[127]    0.0    0.00    0.00       1         initGL() [127]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuSPH::LowDensity() [57]
+[128]    0.0    0.00    0.00       1         MkLiuGrids::SetSmoothLen(double) [128]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuGrids::Setup(MkLiuParticles&) [130]
+[129]    0.0    0.00    0.00       1         MkLiuGrids::Clear() [129]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuSPH::LowDensity() [57]
+[130]    0.0    0.00    0.00       1         MkLiuGrids::Setup(MkLiuParticles&) [130]
+                0.00    0.00     400/400         MkLiuGrid::MkLiuGrid() [98]
+                0.00    0.00     400/400         MkLiuGrids::operator()(int, int, int) [93]
+                0.00    0.00     400/400         MkLiuGrid::Setup(float, float, float, float, float, float) [97]
+                0.00    0.00       1/1           MkLiuGrids::Clear() [129]
+                0.00    0.00       1/1           MkLiuGrids::Update(MkLiuParticles&) [131]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuGrids::Setup(MkLiuParticles&) [130]
+[131]    0.0    0.00    0.00       1         MkLiuGrids::Update(MkLiuParticles&) [131]
+                0.00    0.00     362/362         MkLiuParticles::GetSize() [102]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[132]    0.0    0.00    0.00       1         MkLiuGrids::SetXMax(double) [132]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[133]    0.0    0.00    0.00       1         MkLiuGrids::SetXMin(double) [133]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[134]    0.0    0.00    0.00       1         MkLiuGrids::SetYMax(double) [134]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[135]    0.0    0.00    0.00       1         MkLiuGrids::SetYMin(double) [135]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[136]    0.0    0.00    0.00       1         MkLiuGrids::SetZMax(double) [136]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[137]    0.0    0.00    0.00       1         MkLiuGrids::SetZMin(double) [137]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuSPH::Initialize(int, int, int, int, int) [69]
+[138]    0.0    0.00    0.00       1         MkLiuKernel::SetKernelType(MkKernelType) [138]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[139]    0.0    0.00    0.00       1         MkLiuParticles::SetColorType(CType) [139]
+                0.00    0.00     361/361         MkLiuParticle::SetColorType(CType) [103]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[140]    0.0    0.00    0.00       1         MkLiuSPH::SetMaxTimeStep(int) [140]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[141]    0.0    0.00    0.00       1         MkLiuSPH::GetLiuParticles() [141]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[142]    0.0    0.00    0.00       1         MkLiuSPH::SetDt(double) [142]
+-----------------------------------------------
+                0.00    0.00       1/1           MkLiuSPH::Run() [1]
+[143]    0.0    0.00    0.00       1         MkLiuSPH::Output() [143]
+-----------------------------------------------
+                0.00    0.00       1/1           InitLiuSPH() [54]
+[144]    0.0    0.00    0.00       1         MkLiuSPH::SetDim(int) [144]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+
+Index by function name
+
+  [54] InitLiuSPH()          [118] MkLiuParticles::Initialize(int) [15] MkLiuSPH::Norm_Bnd_Density()
+  [55] densitycheck(int, char**) [139] MkLiuParticles::SetColorType(CType) [1] MkLiuSPH::Run()
+  [79] min(double, double)    [26] MkLiuParticles::Draw() [23] MkLiuSPH::Draw()
+ [127] initGL()              [102] MkLiuParticles::GetSize() [142] MkLiuSPH::SetDt(double)
+ [128] MkLiuGrids::SetSmoothLen(double) [123] MkLiuParticles::MkLiuParticles() [64] MkLiuSPH::Shake()
+ [129] MkLiuGrids::Clear()   [124] MkLiuParticles::~MkLiuParticles() [143] MkLiuSPH::Output()
+ [130] MkLiuGrids::Setup(MkLiuParticles&) [6] MkLiuParticles::operator[](int) [144] MkLiuSPH::SetDim(int)
+ [131] MkLiuGrids::Update(MkLiuParticles&) [94] MkInt::Clear() [11] MkLiuSPH::Art_Visc()
+ [132] MkLiuGrids::SetXMax(double) [95] MkInt::MkInt()    [52] MkLiuSPH::Calc_Norm()
+ [133] MkLiuGrids::SetXMin(double) [105] MkLine::MkLine() [32] MkLiuSPH::Ext_Force()
+ [134] MkLiuGrids::SetYMax(double) [46] MkPlane::ApplyMatrix() [8] MkLiuSPH::Int_Force()
+ [135] MkLiuGrids::SetYMin(double) [19] MkPlane::GetDistance(MkPoint&) [125] MkLiuSPH::SetRhoRef(double)
+ [136] MkLiuGrids::SetZMax(double) [29] MkPlane::GetNearestPoint(MkPoint&) [40] MkLiuSPH::Viscosity()
+ [137] MkLiuGrids::SetZMin(double) [58] MkPlane::CalcABCD() [114] MkVector::Initialize(int)
+  [93] MkLiuGrids::operator()(int, int, int) [61] MkPlane::ResetAll() [66] MkVector::Cross(MkVector&, MkVector&)
+  [25] MkLiuPairs::Initialize(int) [59] MkPlane::SetPoints(MkPoint, MkPoint, MkPoint) [65] MkVector::Unify()
+  [91] MkLiuPairs::Clear()    [62] MkPlane::MkPlane()    [115] MkVector::GetSize()
+ [120] MkLiuPairs::MkLiuPairs() [106] MkPoint::Set(double, double, double) [116] MkVector::SetVector(int)
+ [121] MkLiuPairs::~MkLiuPairs() [111] MkPoint::Unify()   [68] MkVector::MkVector(double, double, double)
+  [14] MkLiuPairs::operator[](int) [41] MkPoint::MkPoint(double, double, double) [117] MkVector::MkVector()
+  [10] MkLiuKernel::SetupAlphaD() [90] MkPoint::MkPoint() [109] MkVector::~MkVector()
+   [9] MkLiuKernel::SetSmoothLen(double) [101] MkPoint::MkPoint() [67] MkVector::operator()(int)
+ [138] MkLiuKernel::SetKernelType(MkKernelType) [48] MkPoint::operator=(MkPoint const&) [96] MkLiuGrid::Initialize()
+  [20] MkLiuKernel::W(double) [81] MkPoint::operator=(MkPoint&) [97] MkLiuGrid::Setup(float, float, float, float, float, float)
+  [22] MkLiuKernel::dWdX(double, double, double, double) [104] MkShape::MkShape() [98] MkLiuGrid::MkLiuGrid()
+  [17] MkLiuKernel::dWdY(double, double, double, double) [107] MkDouble::Initialize(int) [16] MkLiuPair::DWDX(int)
+  [18] MkLiuKernel::dWdZ(double, double, double, double) [113] MkDouble::Clear() [31] MkLiuPair::Clear()
+  [70] MkLiuKernel::SetDim(int) [92] MkDouble::MkDouble(int, int) [30] MkLiuPair::MkLiuPair()
+  [38] MkLiuKernel::MkLiuKernel(MkKernelType, int, double) [43] MkDouble::MkDouble(int) [73] MkLiuPair::~MkLiuPair()
+ [112] MkLiuBoundary::Initialize() [108] MkDouble::MkDouble() [83] MkMatrix4::Clear()
+  [80] MkLiuBoundary::GetSmoothLen() [87] MkDouble::~MkDouble() [51] MkMatrix4::Scale(double, double, double)
+  [45] MkLiuBoundary::Draw()  [12] MkDouble::operator()(int) [50] MkMatrix4::Rotate(double, double, double)
+  [60] MkLiuBoundary::MkLiuBoundary() [37] MkDouble::operator()(int, int) [82] MkMatrix4::Identity()
+  [99] MkLiuParticle::Initialize() [69] MkLiuSPH::Initialize(int, int, int, int, int) [88] MkMatrix4::Translate(double, double, double)
+  [39] MkLiuParticle::SetupColor() [57] MkLiuSPH::LowDensity() [85] MkMatrix4::MkMatrix4()
+  [74] MkLiuParticle::GetSmoothLen() [7] MkLiuSPH::Pair_Count() [84] MkMatrix4::operator=(MkMatrix4&)
+ [103] MkLiuParticle::SetColorType(CType) [76] MkLiuSPH::C_art_water(double) [78] MkMatrix4::operator()(int, int)
+  [42] MkLiuParticle::GetParticleType() [4] MkLiuSPH::Direct_Find() [49] MkMatrix4::operator*=(MkMatrix4&)
+  [33] MkLiuParticle::Draw() [119] MkLiuSPH::GetLiuParam() [86] operator*(MkPoint&, MkMatrix4&)
+  [75] MkLiuParticle::SetEta(double) [77] MkLiuSPH::P_art_water(double) [89] operator*(MkMatrix4&, MkMatrix4&)
+ [122] MkLiuParticle::GetMass() [3] MkLiuSPH::Single_Step() [27] __fpclassify
+ [100] MkLiuParticle::MkLiuParticle() [36] MkLiuSPH::Art_Bnd_Repel() [126] __gcc_deregister_frame
+ [110] MkLiuParticle::~MkLiuParticle() [53] MkLiuSPH::Calc_Bnd_Norm() [35] floor
+  [63] MkLiuBoundarys::Initialize(int) [21] MkLiuSPH::Pair_Bnd_Count() [44] frexp
+  [47] MkLiuBoundarys::Draw() [140] MkLiuSPH::SetMaxTimeStep(int) [28] ldexp
+  [72] MkLiuBoundarys::GetSize() [13] MkLiuSPH::Direct_Bnd_Find() [5] pow
+  [34] MkLiuBoundarys::operator[](int) [141] MkLiuSPH::GetLiuParticles()

@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblibBoostTest.a.a  CMakeFiles/libBoostTest.a.dir/MkBoostTest.cpp.o
+/usr/bin/ranlib liblibBoostTest.a.a

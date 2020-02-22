@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/LiuSPH.dir/MkLiuTest.cpp.o  -o LiuSPH  -L/home/singsong/CppPrj/SPH/. -Wl,-rpath,/home/singsong/CppPrj/SPH/. liblibLiuSPH.a.a -lGL -lGLU -lglut 

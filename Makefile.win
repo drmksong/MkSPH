@@ -1,0 +1,66 @@
+CC = g++ 
+SOURCES = MkObject.cpp MkDouble.cpp MkFloat.cpp MkInt.cpp MkMatrix.cpp MkSparseMatrix.cpp MkKrig.cpp MkPointData.cpp MkPoint.cpp MkLine.cpp MkSpline.cpp MkPlane.cpp MkPolygon.cpp MkNurbs.cpp MkMisc.cpp MkColor.cpp MkBaseGenetic.cpp MkParticle.cpp MkSolidParticle.cpp MkShape.cpp MkSphere.cpp MkCube.cpp MkCircle.cpp MkCylinder.cpp MkRect.cpp MkTriangle.cpp MkDimUnit.cpp MkBndCon.cpp MkDOF.cpp MkEntity.cpp MkExcavStep.cpp MkGrid.cpp MkMesh.cpp MkCut.cpp MkFill.cpp MkWall.cpp MkFault.cpp MkOpenGL.cpp MkSmoothFunc.cpp rngs.c rvgs.c MkSPH.cpp MkStress.cpp MkFailure.cpp MkStrain.cpp MkLiuSPH_mk2.cpp MkLiuKernel.cpp MkLiuParticle.cpp MkLiuPair.cpp MkLiuParam.cpp MkLiuGrid.cpp MkLiuBound.cpp MkBuiSPH_mk1.cpp MkBuiKernel.cpp MkBuiParticle.cpp MkBuiPair.cpp MkBuiParam.cpp MkBuiGrid.cpp MkBuiBound.cpp MkBlaSPH_mk1.cpp MkBlaKernel.cpp MkBlaParticle.cpp MkBlaPair.cpp MkBlaParam.cpp MkBlaGrid.cpp MkBlaBound.cpp 
+HEADERS = MkObject.h MkDouble.h MkFloat.h MkInt.h MkMatrix.h MkSparseMatrix.h MkKrig.h MkPointData.h MkPoint.h MkLine.h MkSpline.h MkPlane.h MkPolygon.h MkNurbs.h MkMisc.h MkColor.h MkBaseGenetic.h MkParticle.h MkSolidParticle.h MkShape.h MkSphere.h MkCube.h MkCircle.h MkCylinder.h MkRect.h MkTriangle.h MkDimUnit.h MkBndCon.h MkDOF.h MkEntity.h MkExcavStep.h MkGrid.h MkMesh.h MkCut.h MkFill.h MkWall.h MkFault.h MkOpenGL.h MkSmoothFunc.h rngs.h rvgs.h MkSPH.h MkStress.h MkFailure.h MkStrain.h MkLiuSPH_mk2.hpp MkLiuKernel.hpp MkLiuParticle.hpp MkLiuPair.hpp MkLiuParam.hpp MkLiuGrid.hpp MkLiuBound.hpp MkBuiSPH_mk1.hpp MkBuiKernel.hpp MkBuiParticle.hpp MkBuiPair.hpp MkBuiParam.hpp MkBuiGrid.hpp MkBuiBound.hpp MkBlaSPH_mk1.hpp MkBlaKernel.hpp MkBlaParticle.hpp MkBlaPair.hpp MkBlaParam.hpp MkBlaGrid.hpp MkBlaBound.hpp
+OBJECTS=  MkObject.o MkDouble.o MkFloat.o MkInt.o MkMatrix.o MkSparseMatrix.o MkKrig.o MkPointData.o MkPoint.o MkLine.o MkSpline.o MkPlane.o MkPolygon.o MkNurbs.o MkMisc.o MkColor.o MkBaseGenetic.o MkParticle.o MkSolidParticle.o MkShape.o MkSphere.o MkCube.o MkCircle.o MkCylinder.o MkRect.o MkTriangle.o MkDimUnit.o MkBndCon.o MkDOF.o MkEntity.o MkExcavStep.o MkGrid.o MkMesh.o MkCut.o MkFill.o MkWall.o MkFault.o MkOpenGL.o MkSmoothFunc.o rngs.o rvgs.o MkSPH.o MkStress.o MkFailure.o MkStrain.o MkLiuSPH_mk2.o MkLiuKernel.o MkLiuParticle.o MkLiuPair.o MkLiuParam.o MkLiuGrid.o MkLiuBound.o MkBuiSPH_mk1.o MkBuiKernel.o MkBuiParticle.o MkBuiPair.o MkBuiParam.o MkBuiGrid.o MkBuiBound.o MkBlaSPH_mk1.o MkBlaKernel.o MkBlaParticle.o MkBlaPair.o MkBlaParam.o MkBlaGrid.o MkBlaBound.o
+ 
+INCLUDE = -Ic:/nurbs/include  -Ic:/mingw/include -Ic:/mingw/GLUT/include  -Ic:/coin3d/include
+LIB = -Lc:/nurbs/lib -Lc:/mingw/lib -Lc:/mingw/GLUT/lib -L. -lm -lnurb -ltran -lmkgcc -lstdc++ -lopengl32 -lglu32-lglut32 
+MkLIB = libmkgcc.a
+CFLAGS = -c -fpermissive -frtti -DCOIN_NOT_DLL -DSOQT_NOT_DLL -DMKDEBUG -DNURB -DSUN -Wno-deprecated -D__GL_H__ 
+LFLAGS = 
+TFLAGS = -frtti  -DCOIN_NOT_DLL -DSOQT_NOT_DLL -DMKDEBUG -DNURB -DSUN
+
+$(MkLIB) : $(OBJECTS) 
+	ar crvs $(MkLIB) $(OBJECTS)
+	ranlib $(MkLIB)
+	cp $(MkLIB) ../lib
+
+$(OBJECTS) : $(SOURCES) $(HEADERS)
+	$(CC) $(CFLAGS) $(INCLUDE) $(SOURCES)
+
+test : mktest.o $(MkLIB)
+	$(CC) mktest.o  -Lc:/nurbs/lib -Lc:/mingw/GLUT/lib -L. -lmkgcc -lnurb -ltran -lm -lopengl32  -lglu32 -lglut32 -o MkTest.exe # -glmf32 -lfreeglut_static -DFEEGLUT_STATIC
+
+mktest.o : mktest.cpp 
+	$(CC) $(CFLAGS) $(INCLUDE) -c $<
+
+sph : mktestsph.o $(MkLIB) 
+	$(CC) mktestsph.o  -Lc:/nurbs/lib -Lc:/mingw/GLUT/lib -L. -lmkgcc -lnurb -ltran -lm -lopengl32  -lglu32 -lglut32 -o MkTestSPH.exe # -glmf32 -lfreeglut_static -DFEEGLUT_STATIC
+
+mktestsph.o : mktestsph.cpp 
+	$(CC) $(CFLAGS) $(INCLUDE) -c $<
+
+liu : MkLiuTest.o $(MkLIB)
+	$(CC) MkLiuTest.o  -Lc:/nurbs/lib -Lc:/mingw/GLUT/lib -L. -lmkgcc -lm -lopengl32  -lglu32 -lglut32 -o MkLiuTest.exe $(LFLAGS) # -glmf32 -lfreeglut_static -DFEEGLUT_STATIC
+
+MkLiuTest.o : MkLiuTest.cpp MkLiuTest.hpp
+	$(CC) $(CFLAGS) -D_WCHAR_T_DEFINED $(INCLUDE) -c $<
+
+bui : MkBuiTest.o $(MkLIB)
+	$(CC) MkBuiTest.o  -Lc:/nurbs/lib -Lc:/mingw/GLUT/lib -L. -lmkgcc -lm -lopengl32  -lglu32 -lglut32 -o MkBuiTest.exe $(LFLAGS) # -glmf32 -lfreeglut_static -DFEEGLUT_STATIC
+
+MkBuiTest.o : MkBuiTest.cpp MkBuiTest.hpp
+	$(CC) $(CFLAGS) -D_WCHAR_T_DEFINED $(INCLUDE) -c $<
+
+bla : MkBlaTest.o $(MkLIB)
+	$(CC) MkBlaTest.o  -Lc:/nurbs/lib -Lc:/mingw/GLUT/lib -L. -lmkgcc -lm -lopengl32  -lglu32 -lglut32 -o MkBlaTest.exe $(LFLAGS) # -glmf32 -lfreeglut_static -DFEEGLUT_STATIC
+
+MkBlaTest.o : MkBlaTest.cpp MkBlaTest.hpp
+	$(CC) $(CFLAGS) -D_WCHAR_T_DEFINED $(INCLUDE) -c $<
+
+9p : 9p.o $(MkLIB)
+	$(CC) 9p.o  -Lc:/nurbs/lib -Lc:/mingw/GLUT/lib -L. -lmkgcc -lnurb -ltran -lm -lopengl32  -lglu32 -lglut32 -o 9p.exe # -glmf32 -lfreeglut_static -DFEEGLUT_STATIC
+
+9p.o : 9p.cpp 
+	$(CC) $(CFLAGS) $(INCLUDE) -c $<
+
+mesh : mkmeshtest.o $(MkLIB)
+	$(CC) mkmeshtest.o -Lc:/nurbs/lib -L. -Lc:/nurbs/lib -Lc:/mingw/GLUT/lib -lmkgcc -lnurb -ltran  -lm -lopengl32 -lglut32 -lglu32 -o MkMeshTest.exe # -glmf32
+
+mkmeshtest.o : mkmeshtest.cpp 
+	$(CC) $(CFLAGS) $(INCLUDE) -c $<
+
+.PHONY : clean
+
+clean :
+	-rm $(MkLIB) $(OBJECTS) 
