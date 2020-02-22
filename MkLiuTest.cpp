@@ -144,13 +144,13 @@ void twoparticles()
   int m, n, mp, np;
   double rho_ref;
 
-  m = 21;
+  m = 51;
   mp = m - 1;
-  n = 21;
+  n = 51;
   np = n - 1;
   ntotal = mp * np;
   nvirt = 0;
-  rho_ref = 1200.0;
+  rho_ref = 900.0;
 
   MkDebug("nvirt = %d\n", nvirt);
   mySPH.Initialize(ntotal, nvirt, gi, gj, gk);
@@ -159,7 +159,7 @@ void twoparticles()
   // bnd.Initialize(1);
   // bnd[0].SetPoints(MkPoint(-1.0, -10.0, 0.0), MkPoint(1., -10.0, 0.0), MkPoint(0.0, -10.0, 1.0));
 
-  mySPH.SetDt(1.e-2);
+  mySPH.SetDt(2.e-3);
   mySPH.SetDim(3);
   mySPH.SetMaxTimeStep(9999999);
   MkDebug("ntotal = %d\n", ntotal);
