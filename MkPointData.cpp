@@ -78,19 +78,31 @@ MkDataPoints::MkDataPoints(int size, MkDataPoint *rps)
 
     if (size < 0)
     {
-        ShowMessage("::MkDataPoints - MkDataPoints(int size)");
-        ;
-        return;
+        MkDebug("::MkDataPoints - MkDataPoints(int size)");
+        throw Size(std::string("MkDataPoints::Constructor throw negative size exception"), size);
+    }
+    if (rps == NULL)
+    {
+        MkDebug("::MkDataPoints - MkDataPoints(int size)");
+        throw Size(std::string("MkDataPoints::Constructor throw null pointer argument"), size);
     }
 
     FSize = size;
     if (FSize == 0)
     {
-        FPoint = NULL;
+        FPoint.reset();
         return;
     }
+    try
+    {
+        FPoint.reset(new MkDataPoint[FSize]);
+    }
+    catch (std::bad_alloc &a)
+    {
+        MkDebug("MkDataPoints::MkDataPoints bad_alloc thrown!!!\n");
+        throw Alloc(a.what());
+    }
 
-    FPoint = new MkDataPoint[FSize];
     for (int i = 0; i < FSize; i++)
         FPoint[i] = rps[i];
 }
@@ -99,29 +111,32 @@ MkDataPoints::MkDataPoints(int size)
 {
     if (size < 0)
     {
-        ShowMessage("::MkDataPoints - MkDataPoints(int size)");
-        ;
-        return;
+        MkDebug("::MkDataPoints - MkDataPoints(int size)");
+        throw Size(std::string("MkDataPoints::Constructor throw negative size exception"), size);
     }
 
     FSize = size;
     if (FSize == 0)
     {
-        FPoint = NULL;
+        FPoint.reset();
         return;
     }
 
-    FPoint = new MkDataPoint[FSize];
+    try
+    {
+        FPoint.reset(new MkDataPoint[FSize]);
+    }
+    catch (std::bad_alloc &a)
+    {
+        MkDebug("MkDataPoints::MkDataPoints bad_alloc thrown!!!\n");
+        throw Alloc(a.what());
+    }
 }
 
 MkDataPoints::~MkDataPoints()
 {
     FSize = 0;
-    if (FPoint)
-    {
-        delete[](MkDataPoint *) FPoint;
-        FPoint = NULL;
-    }
+    FPoint.reset();
 }
 
 void MkDataPoints::Initialize(int size)
@@ -129,9 +144,8 @@ void MkDataPoints::Initialize(int size)
 
     if (size < 0)
     {
-        ShowMessage("::MkDataPoints - Initialize(int size)");
-        ;
-        return;
+        MkDebug("::MkDataPoints - Initialize(int size)");
+        throw Size(std::string("MkDataPoints::Initialize throw negative size exception"), size);
     }
     if (FSize == size)
         return;
@@ -139,40 +153,52 @@ void MkDataPoints::Initialize(int size)
     FSize = size;
     if (FSize == 0)
     {
-        if (FPoint != NULL)
-            delete[](MkDataPoint *) FPoint;
-        FPoint = NULL;
+        FPoint.reset();
         return;
     }
-
-    if (FPoint != NULL)
-        delete[](MkDataPoint *) FPoint;
-    FPoint = new MkDataPoint[FSize];
+    try
+    {
+        FPoint.reset(new MkDataPoint[FSize]);
+    }
+    catch (std::bad_alloc &a)
+    {
+        MkDebug("MkDataPoints::Initialize bad_alloc thrown!!!\n");
+        throw Alloc(a.what());
+    }
 }
 
 void MkDataPoints::Initialize(int size, MkDataPoint *rps)
 {
 
-    if (size < 0 || rps == NULL)
+    if (size < 0)
     {
-        ShowMessage("::MkDataPoints - Initialize(int size)");
-        ;
-        return;
+        MkDebug("::MkDataPoints - Initialize(int size)");
+        throw Size(std::string("MkDataPoints::Initialize throw negative size exception"), size);
+    }
+    if (rps == NULL)
+    {
+        MkDebug("::MkDataPoints - Initialize(int size)");
+        throw Size(std::string("MkDataPoints::Initialize throw null pointer argument"), size);
     }
     if (FSize == size)
         return;
     FSize = size;
     if (FSize == 0)
     {
-        if (FPoint != NULL)
-            delete[](MkDataPoint *) FPoint;
-        FPoint = NULL;
+        FPoint.reset();
         return;
     }
+    try
+    {
+        FPoint.reset(new MkDataPoint[FSize]);
+    }
 
-    if (FPoint != NULL)
-        delete[](MkDataPoint *) FPoint;
-    FPoint = new MkDataPoint[FSize];
+    catch (std::bad_alloc &a)
+    {
+        MkDebug("MkDataPoints::Initialize bad_alloc thrown!!!\n");
+        throw Alloc(a.what());
+    }
+
     for (int i = 0; i < FSize; i++)
         (*this)[i] = rps[i];
 }
@@ -180,18 +206,21 @@ void MkDataPoints::Initialize(int size, MkDataPoint *rps)
 void MkDataPoints::Grow(int Delta)
 {
     int i;
-    MkDataPoint *rp = NULL;
+    boost::shared_array<MkDataPoint> rp;
+    try
+    {
+        rp.reset(new MkDataPoint[FSize + Delta]);
+    }
+    catch (std::bad_alloc &a)
+    {
+        MkDebug("MkDataPoints::Grow bad_alloc thrown!!!\n");
+        throw Alloc(a.what());
+    }
 
-    rp = new MkDataPoint[FSize + Delta];
     for (i = 0; i < FSize; i++)
         rp[i] = FPoint[i];
     for (i = FSize; i < FSize + Delta; i++)
         rp[i] = NullDataPoint;
-    if (FPoint)
-    {
-        delete[](MkDataPoint *) FPoint;
-        FPoint = NULL;
-    }
     FPoint = rp;
     FSize = FSize + Delta;
 }
@@ -207,11 +236,8 @@ bool MkDataPoints::Clear()
 {
 
     FSize = 0;
-    if (FPoint)
-    {
-        delete[](MkDataPoint *) FPoint;
-        FPoint = NULL;
-    }
+    FPoint.reset();
+
     return true;
 }
 
@@ -233,10 +259,19 @@ MkDataPoints &MkDataPoints::operator=(MkDataPoints &points)
     FSize = points.FSize;
     if (FSize == 0)
     {
-        this->FPoint = NULL;
+        FPoint.reset();
         return *this;
     }
-    this->FPoint = new MkDataPoint[FSize];
+
+    try
+    {
+        FPoint.reset(new MkDataPoint[FSize]);
+    }
+    catch (std::bad_alloc &a)
+    {
+        MkDebug("MkDataPoints::operator= bad_alloc thrown!!!\n");
+        throw Alloc(a.what());
+    }
 
     for (i = 0; i < FSize; i++)
         this->FPoint[i] = points.FPoint[i];

@@ -52,7 +52,7 @@ public:
 class MkDataPoints
 {
 protected:
-    MkDataPoint *FPoint;
+    boost::shared_array<MkDataPoint> FPoint;
     int FSize;
     MkColor Color;
 
@@ -62,7 +62,6 @@ public:
     MkDataPoints()
     {
         FSize = 0;
-        FPoint = NULL;
     }
     ~MkDataPoints();
     virtual void Initialize(int size);
@@ -89,6 +88,30 @@ public:
     MkDataPoints &operator=(MkDataPoints &points);
     bool operator==(MkDataPoints &points);
     //virtual void Draw(TObject *);
+
+    class Alloc
+    {
+    public:
+        std::string What;
+        Alloc(std::string what) : What(what) {}
+        std::string what() { return What; }
+    };
+    class Size
+    {
+    public:
+        std::string What;
+        int N;
+        Size(std::string what, int n) : What(what), N(n) {}
+        std::string what() { return What; }
+    };
+    class Range
+    {
+    public:
+        std::string What;
+        int N;
+        Range(std::string what, int n) : What(what), N(n) {}
+        std::string what() { return What; }
+    };
 };
 
 extern MkDataPoint NullDataPoint;
