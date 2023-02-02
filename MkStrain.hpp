@@ -6,9 +6,9 @@
 //#include <conio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "MkDouble.h"
+// #include "MkDouble.h"
 #include "MkInt.h"
-#include "MkMisc.h"
+#include "MkMisc.hpp"
 
 #ifdef __BCPLUSPLUS__
 #include <vcl.h>

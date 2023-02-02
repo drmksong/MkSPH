@@ -1,17 +1,17 @@
 //---------------------------------------------------------------------------
 #ifndef MkRangeH
 #define MkRangeH
-#include "MkPoint.h"
-#include "MkShape.h"
-#include "MkCube.h"
-#include "MkSphere.h"
-#include "MkPlane.h"
-#include "MkCylinder.h"
-#include "MkRect.h"
-#include "MkCircle.h"
+#include "MkPoint.hpp"
+#include "MkShape.hpp"
+#include "MkCube.hpp"
+#include "MkSphere.hpp"
+#include "MkPlane.hpp"
+#include "MkCylinder.hpp"
+#include "MkRect.hpp"
+#include "MkCircle.hpp"
 
 //---------------------------------------------------------------------------
-enum MkRangeOperatorType { rotNone, rotUnion, rotIntersect, rotComplement, rotDifference }; // ÇÕÁýÇÕ(+),±³ÁýÇÕ(*),¿©ÁýÇÕ(!),Â÷ÁýÇÕ(-)
+enum MkRangeOperatorType { rotNone, rotUnion, rotIntersect, rotComplement, rotDifference }; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(+),ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(*),ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(!),ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(-)
 class MkRangeOperator;
 class MkRange {
   friend class MkRangeTree;

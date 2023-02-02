@@ -1,4 +1,6 @@
 //---------------------------------------------------------------------------
+
+
 #ifndef MkSparseMatrixH
 #define MkSparseMatrixH
 
@@ -6,10 +8,10 @@
 //#include <conio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "MkDouble.h"
+// #include "MkDouble.h"
 #include "MkInt.h"
-#include "MkMisc.h"
-#include "MkMatrix.h"
+#include "MkMisc.hpp"
+#include "MkMatrix.hpp"
 
 #define M_PI 3.14159265358979323846
 
@@ -47,7 +49,7 @@ public:
 
 //  A[M][N];
 
-class MkMatrix;
+// class MkMatrix<float>;
 
 class MkSparseMatrix
 {
@@ -108,11 +110,11 @@ private:
 public:
    MkSparseMatrix();
    MkSparseMatrix(int m, int n);
-   MkSparseMatrix(MkMatrix &mat);
+   MkSparseMatrix(MkMatrix<float> &mat);
    MkSparseMatrix(MkSparseMatrix &mat);
    ~MkSparseMatrix();
 
-   void SetMatrix(MkMatrix &mat);
+   void SetMatrix(MkMatrix<float> &mat);
    void SetMatrix(MkSparseMatrix &mat);
    void SetMatrixType(MatType mat) { FMatType = mat; }
    void SetMaxIteration(int max_iter) { MaxIteration = max_iter; }
@@ -128,11 +130,11 @@ public:
    bool Invert();
 
    bool LUDecompose();
-   bool LUBackSubstitute(MkVector &);
-   bool GaussSeidel(MkVector &, MkVector &);
+   bool LUBackSubstitute(MkVector<float> &);
+   bool GaussSeidel( MkVector<float> &,  MkVector<float> &);
    bool isSingular();
-   bool Solve(MkVector &);
-   bool Solve(MkVector &, SolveType solve_type);
+   bool Solve(MkVector<float> &);
+   bool Solve(MkVector<float> &, SolveType solve_type);
 
    bool Add(int ai, int aj);
    bool Add(int ai, int aj, double value);

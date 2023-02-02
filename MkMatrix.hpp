@@ -167,6 +167,8 @@ public:
     int GetFI() { return FSize; }
     int GetSize() { return FSize; }
     MkArray<T> &GetDouble() { return FVector; }
+    MkArray<T> &Get() { return FVector; }
+
     T GetLength()
     {
         T sum = 0;

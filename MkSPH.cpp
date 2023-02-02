@@ -1,10 +1,9 @@
 //---------------------------------------------------------------------------
-
 #ifndef max
 #define max(a, b) (((a) > (b)) ? (a) : (b))
 #endif
 
-#include "MkSPH.h"
+#include "MkSPH.hpp"
 
 MkSPH::MkSPH()
 {
@@ -369,7 +368,7 @@ bool MkSPH::UpdateSPHGrid()
   float unval, dist;
   float rho_j = 1, m_j = 1;
   static bool flag = true;
-  MkVector Xi(3), rij(3), rhs(3);
+  MkVector<float> Xi(3), rij(3), rhs(3);
   int gridnum;
   MkInt grids(9);
   int I, J, II, JJ;
@@ -411,7 +410,7 @@ bool MkSPH::ComputeDensity()
   float unval, dist;
   float rho_j = 1, m_j = 1;
   static bool flag = true;
-  MkVector Xi(3), rij(3), rhs(3);
+  MkVector<float> Xi(3), rij(3), rhs(3);
   int gridnum;
   MkInt grids(9);
   int I, J, II, JJ;
@@ -637,7 +636,7 @@ bool MkSPH::ComputeInternalForce() // Mohaghan 1992
   float unval;
   float rho_j = 1, m_j = 1;
   static bool flag = true;
-  MkVector Xi(3), rij(3), rhs(3);
+  MkVector<float> Xi(3), rij(3), rhs(3);
   int gridnum;
   MkInt grids(9);
   int I, J, II, JJ;
@@ -943,7 +942,7 @@ bool MkSPH::ComputeViscousForce()
   float unval;
   float rho_j = 1, m_j = 1;
   static bool flag = true;
-  MkVector Xi(3), rij(3), rhs(3);
+  MkVector<float> Xi(3), rij(3), rhs(3);
   int gridnum;
   MkInt grids(9);
   int I, J, II, JJ;

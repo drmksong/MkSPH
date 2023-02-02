@@ -7,10 +7,10 @@
 #endif
 
 #include <string>
-#include "MkShape.h"
-#include "MkPolygon.h"
-#include "MkRect.h"
-#include "MkLine.h"
+#include "MkShape.hpp"
+#include "MkPolygon.hpp"
+#include "MkRect.hpp"
+#include "MkLine.hpp"
 #include "assert.h"
 //---------------------------------------------------------------------------
 

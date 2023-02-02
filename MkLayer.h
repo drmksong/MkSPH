@@ -6,10 +6,10 @@
 #include "GlobalVarUnit.h"
 #endif
 
-#include "MkObject.h"
+#include "MkObject.hpp"
 #include "MkEntity.h"
 #include "MkCut.h"
-#include "MkFill.h"
+#include "MkFill.hpp"
 #include "MkProfile.h"
 //---------------------------------------------------------------------------
 class MkLayer : public MkEntity {
@@ -22,8 +22,8 @@ protected:
   float SubUnitWeight[2];
   float Cohesion[2];
   float Friction[2];
-  float HorSubReact[2]; // ¼öÆò Áö¹Ý¹Ý·Â°è¼ö(modulus of subgrade reaction
-  float VerSubReact[2]; // ¼öÁ÷ Áö¹Ý¹Ý·Â°è¼ö(modulus of subgrade reaction
+  float HorSubReact[2]; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¹Ý·Â°ï¿½ï¿½(modulus of subgrade reaction
+  float VerSubReact[2]; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ý¹Ý·Â°ï¿½ï¿½(modulus of subgrade reaction
   float Burden;
   float K0;
   float Ka;

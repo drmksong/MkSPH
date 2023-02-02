@@ -258,7 +258,7 @@ float repos(float Mu)
   float unval,dist;
   float rho_j=1, m_j=1;
   static bool flag=true;
-  MkVector Xi(3), rij(3), rhs(3);
+  MkVector<float> Xi(3), rij(3), rhs(3);
   int gridnum;
   MkInt grids(9);
   int I,J,II,JJ;
@@ -497,7 +497,7 @@ void display(void)
   glRotatef(180, 0.,0.,1.);
 
   mySPH.GetParticles().Draw();
-  Lines.Draw();
+  // Lines.Draw();  disabled temorarily due to error of MkContainer does not have Draw member function
   glPopMatrix();
   // this is the new line
   // previously it was: angle++;

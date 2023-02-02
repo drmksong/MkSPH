@@ -7,11 +7,11 @@
 #include "MkEntity.h"
 #include "MkInt.h"
 #include "MkFloat.h"
-#include "MkPoint.h"
-#include "MkLine.h"
-#include "MkPlane.h"
+#include "MkPoint.hpp"
+#include "MkLine.hpp"
+#include "MkPlane.hpp"
 #include "MkDOF.h"
-#include "MkBndCon.h"
+#include "MkBndCon.hpp"
 
 #ifndef dyn_cp
 #define dyn_cp(_dest_,_src_) {\
@@ -198,8 +198,8 @@ protected:
   MkInt ElemNode; // Global Node Number of Elemental Node;
   MkFloat Prop;
   MkNodes * NodeRef; // use for reference, do not allocate, deallocate it
-  MkMatrix Stiff;    // local stifness matrix
-  MkMatrix TranMat;  // local to global
+  MkMatrix<float> Stiff;    // local stifness matrix
+  MkMatrix<float> TranMat;  // local to global
   MkPoint Center, Centroid;
   bool haveResult;
   bool isStiffed;
@@ -247,8 +247,8 @@ public:
   MkNode & GetGlobNode(int i){return (*NodeRef)[i];}
   MkPoint & GetCenter(){FindCenter(); return Center;}
   MkPoint & GetCentroid(){FindCentroid(); return Centroid;}
-  MkMatrix & GetStiff(){return Stiff;}
-  MkMatrix & GetTrans(){return TranMat;}
+  MkMatrix<float> & GetStiff(){return Stiff;}
+  MkMatrix<float> & GetTrans(){return TranMat;}
   int GetNumberOfNode(){return ElemNode.getSzX();}
   bool GetStiffed(){return isStiffed;}
 
@@ -409,7 +409,7 @@ class MkTrussElement : public MkLineElement {
 class MkBeamElement : public MkLineElement {
 protected:
   float AxialLoad, Height, Width, Thickness;
-  MkVector FixedEnd,Resultant;
+  MkVector<float> FixedEnd,Resultant;
 public:
   MkBeamElement() : MkLineElement() {AxialLoad = 0;FixedEnd.Initialize(12);Resultant.Initialize(12);className="MkBeamElement";}
   MkBeamElement(MkNodes &nodes) : MkLineElement(nodes){AxialLoad=0;FixedEnd.Initialize(12);Resultant.Initialize(12);className="MkBeamElement";}
@@ -448,8 +448,8 @@ public:
   float d3N2(float xi);
   float d3N3(float xi);
   float d3N4(float xi);
-  MkVector & GetFixedEnd(){return FixedEnd;}
-  MkVector & GetResultant(){return Resultant;}
+  MkVector<float> & GetFixedEnd(){return FixedEnd;}
+  MkVector<float> & GetResultant(){return Resultant;}
   float GetDisp(float xi);
   float GetAngDis(float xi);
   float GetMoment(float xi); // 0 < xi < 1

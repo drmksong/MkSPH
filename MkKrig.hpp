@@ -1,16 +1,16 @@
 //---------------------------------------------------------------------------
 #ifndef MkKrigH
 #define MkKrigH
-#include "MkMatrix.h"
-#include "MkPointData.h"
+#include "MkMatrix.hpp"
+#include "MkPointData.hpp"
 
 class MkKrig {
 private:
     MkDataPoints FDataPoints;
     int FI,FJ;
-    MkVector FX,FM,FR;
-    MkVector FSZ,FPZ,FA;//,FB,FL,FA_bar,FM_bar,FR_bar,FP_bar;
-    MkMatrix FS,FP,FIS;
+    MkVector<float> FX,FM,FR;
+    MkVector<float> FSZ,FPZ,FA;//,FB,FL,FA_bar,FM_bar,FR_bar,FP_bar;
+    MkMatrix<float> FS,FP,FIS;
     bool isSetup;
 public:
     MkKrig();
@@ -19,28 +19,28 @@ public:
     void SetupMatrix();
     float Sigma(float h){return h < 100 ? 1 - sqrt(h)/10 : 0;};
 
-    MkMatrix &S();
-    MkVector &S(MkPoint &);
-    MkVector &S(float x,float y,float z);
+    MkMatrix<float> &S();
+    MkVector<float> &S(MkPoint &);
+    MkVector<float> &S(float x,float y,float z);
 
-    MkMatrix &P();
-    MkVector &P(MkPoint &);
-    MkVector &P(float x,float y,float z);
+    MkMatrix<float> &P();
+    MkVector<float> &P(MkPoint &);
+    MkVector<float> &P(float x,float y,float z);
 
-    MkVector &M();
+    MkVector<float> &M();
     float M(MkPoint &);
     float M(float x,float y,float z);
 
-    MkVector &R();
+    MkVector<float> &R();
     float R(MkPoint &);
     float R(float x,float y,float z);
 
-    MkVector &X();
+    MkVector<float> &X();
     float X(MkPoint &);
     float X(MkDataPoint &);
     float X(float x,float y,float z);
 
-    MkVector &A();
+    MkVector<float> &A();
 
     float Estimate(float x,float y,float z);
     float Estimate(MkPoint &);

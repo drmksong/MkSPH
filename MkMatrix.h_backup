@@ -1,0 +1,202 @@
+//---------------------------------------------------------------------------
+#ifndef MkMatrixH
+#define MkMatrixH
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include <stdlib.h>
+#include "MkFloat.h"
+#include "MkInt.h"
+#include "MkMisc.h"
+//#include "MkSparseMatrix.h"
+
+#ifdef __BCPLUSPLUS__
+#include <vcl.h>
+#endif
+
+#define M_PI 3.14159265358979323846
+
+//class TRealPoint;
+
+class MkMatrix4 {
+private:
+    float FMatrix[4][4];
+    int FI,FJ;
+public:
+    MkMatrix4();
+    void Identity();
+    void LoadIdentity(){Identity();}
+    void Clear();
+    void Translate(float x,float y,float z);
+    void Rotate(float alpha,float beta,float gamma);
+    void RotateInX(float alpha);
+    void RotateInY(float beta);
+    void RotateInZ(float gamma);
+    void RotateInA(float theta, float l, float m, float n);
+    void Scale(float sx,float sy,float sz);
+    MkMatrix4 & operator=(MkMatrix4 &);
+    float & operator()(int i,int j) {static float Zero;Zero=0;
+           if(i<4&&i>=0&&j<4&&j>=0) return FMatrix[i][j];
+           else return Zero;}
+    MkMatrix4 & operator*=(float f);
+    MkMatrix4 & operator*=(MkMatrix4 &);
+    MkMatrix4 & operator+=(float f);
+    MkMatrix4 & operator+=(MkMatrix4 &);
+    MkMatrix4 & operator-=(float f);
+    MkMatrix4 & operator-=(MkMatrix4 &);
+
+    friend MkMatrix4 & operator*(MkMatrix4&,float f);
+    friend MkMatrix4 & operator*(MkMatrix4&,MkMatrix4 &);
+    friend MkMatrix4 & operator+(MkMatrix4&,float f);
+    friend MkMatrix4 & operator+(MkMatrix4&,MkMatrix4 &);
+    friend MkMatrix4 & operator-(MkMatrix4&,float f);
+    friend MkMatrix4 & operator-(MkMatrix4&,MkMatrix4 &);
+
+#ifdef __BCPLUSPLUS__
+    void Out(TMemo *);
+#endif
+    void Out(char *);
+
+};
+
+//float operator+(float f,MkMatrix4 &rm);
+//float operator-(float f,MkMatrix4 &rm);
+//float operator*(float f,MkMatrix4 &rm);
+//float operator/(float f,MkMatrix4 &rm);
+
+class MkMatrix;
+
+class MkVector {  // for matrix calculation
+private:
+    MkFloat FVector; // only onedimesional
+    int FSize;
+    VectType FVectType;
+public:
+    MkVector();
+    MkVector(int);
+    MkVector(int,VectType);
+    MkVector(MkFloat &);
+    MkVector(float, float, float);
+    ~MkVector();
+    void SetVector(int );
+    void SetVector(float, float, float);
+    void Initialize(int i){SetVector(i);};
+    void SetVectType(VectType vt){FVectType = vt;}
+    void Clear(); // free all the memory and reset.
+    void Unify();
+    void Normalize(){Unify();}
+
+    float Dot(MkVector &);
+    void Cross(MkVector &v2 ,MkVector &target); // target = *this & v2
+
+    int GetFI(){return FSize;}
+    int GetSize(){return FSize;}
+    MkFloat & GetFloat(){return FVector;}
+    float GetLength(){
+      float sum=0;
+      for(int i=0;i<FSize;i++) sum += FVector(i)*FVector(i);
+      return sum>0 ? sqrt(sum)/FSize:0;
+    }
+
+    float & operator()(int i);
+    float & operator[](int i);
+    MkVector & operator=(MkVector &);
+    bool operator==(MkVector &);
+    bool operator!=(MkVector &);
+    
+    friend float operator*(MkVector &v, MkVector &v2){return v.Dot(v2);};
+//    friend MkVector & operator&(MkVector &v, MkVector &v2){return v.Cross(v2);}  // it is wrong...-.-
+
+    MkVector & operator+=(MkVector &);
+    MkVector & operator-=(MkVector &);
+    MkVector & operator*=(float a);
+    MkVector & operator/=(float a);
+    MkVector & operator+=(float a);
+    MkVector & operator-=(float a);
+
+    friend MkVector & operator+(MkVector&,MkVector &);
+    friend MkVector & operator-(MkVector&,MkVector &);
+    friend MkVector & operator*(MkVector&,float a);
+    friend MkVector & operator/(MkVector&,float a);
+    friend MkVector & operator+(MkVector&,float a);
+    friend MkVector & operator-(MkVector&,float a);
+
+#ifdef __BCPLUSPLUS__
+    void Out(TMemo *);
+#endif
+    void Out(char *);
+
+};
+
+// warning : MkMatrix instance will always be changed after some operator function
+//           is applied. Therefore one must backup the original matrix for other
+//           use. Moreover do not use operator such as ! or ~ more than twice,
+//           because the accumulation of arithmetic error will alter the matrix.
+
+//
+//  A00 A01 A02 ... A0n
+//  A10 A11 A12 ... A1n
+//   .   .   .  ...  .
+//  Am0 Am1 Am2 ... Amn
+//
+//class MkSparseMatrix;
+
+class MkMatrix {
+private:
+    MkFloat FMatrix;
+    MkInt FIndex;// row permutation effected by the partial pivoting
+    int FD; // + or - depend on whether the number of row interchanges was even or odd.
+    int FI,FJ;
+    MatType FMatType;
+public:
+    MkMatrix();
+    MkMatrix(int,int);
+    MkMatrix(MkMatrix &);
+//  MkMatrix(MkSparseMatrix &);
+    MkMatrix(MkFloat &);
+    ~MkMatrix();
+    void SetMatrix(int,int);
+    void Initialize(int i,int j){SetMatrix(i,j);}
+    void Identify(); // valid only if FI == FJ
+    void LoadIdentity(){Identify();}
+    void Clear(); // free all the memory and reset.
+    bool Transpose();
+    bool Invert();
+    bool LUDecompose();
+    bool LUBackSubstitute(MkVector &);
+    bool GaussSeidel(MkVector &,MkVector &);
+    bool isSingular();
+    bool Solve(MkVector &);
+    bool Solve(MkVector &,SolveType solve_type);
+
+    int GetFI(){return FI;}
+    int GetFJ(){return FJ;}
+    MkInt & GetIndex(){return FIndex;}
+    MatType GetMatType(){return FMatType;}
+
+    MkMatrix & GetTranspose();
+    MkMatrix & GetInvert();
+
+    MkMatrix & operator!();  // GetInverse
+    MkMatrix & operator~();  // GetTranspos
+    friend MkMatrix & operator!(MkMatrix &m);  // GetInverse
+    friend MkMatrix & operator~(MkMatrix &m);  // GetTranspos
+
+    MkMatrix & operator*=(MkMatrix &);
+    MkVector & operator*=(MkVector &);
+    friend MkMatrix & operator*(MkMatrix &,MkMatrix &);
+    friend MkVector & operator*(MkMatrix &,MkVector &);
+
+    MkMatrix & operator=(MkMatrix &);
+    float & operator()(int i,int j);
+#ifdef __BCPLUSPLUS__
+    void Out(TMemo *);
+#endif
+    void Out(char *);
+};
+
+extern MkMatrix NullMatrix;
+extern MkVector NullVector;
+//---------------------------------------------------------------------------
+#endif

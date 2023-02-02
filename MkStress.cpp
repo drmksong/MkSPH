@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-#include "MkStress.h"
+#include "MkStress.hpp"
 
 //---------------------------------------------------------------------------
 // index
@@ -250,7 +250,7 @@ void MkStress::CalcLMN()
 void MkStress::Eigen() 
 {
   int i,j,m,n,k,l;
-  MkMatrix a(3,3), b(3,3), d(3,3), q(3,3), r(3,3);
+  MkMatrix<float> a(3,3), b(3,3), d(3,3), q(3,3), r(3,3);
   double sum, theta,c,s,MP = 3.141592654;
 
   for (i=0;i<3;i++) {

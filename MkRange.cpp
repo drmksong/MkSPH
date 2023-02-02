@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
-#include "stdafx.h"
-#include "MkRange.h"
+// #include "stdafx.h"
+#include "MkRange.hpp"
 
 #ifdef __BCPLUSPLUS__
 #include <vcl.h>

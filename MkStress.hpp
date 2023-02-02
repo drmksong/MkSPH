@@ -6,7 +6,7 @@
 //#include <conio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "MkVect.hpp"
+// #include "MkVect.hpp"
 #include "MkMisc.hpp"
 #include "MkMatrix.hpp"
 

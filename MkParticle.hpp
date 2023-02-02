@@ -2,7 +2,7 @@
 #define PARTICLE_HPP
 
 #include "MkPoint.hpp"
-#include "MkVect.hpp"
+// #include "MkVect.hpp"
 #include "MkColor.hpp"
 #include <GL/gl.h>
 #include <GL/glu.h>

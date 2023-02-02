@@ -7,11 +7,11 @@
 #include <time.h>
 #include <GL/glut.h>
 #include "rvgs.h"
-#include "MkMatrix.h"
+#include "MkMatrix.hpp"
 #include "MkSmoothFunc.h"
-#include "MkParticle.h"
+#include "MkParticle.hpp"
 #include "MkGrid.h"
-#include "MkSPH.h"
+#include "MkSPH.hpp"
 //---------------------------------------------------------------------------
 #endif
 

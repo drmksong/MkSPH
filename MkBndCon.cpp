@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-#include "MkBndCon.h"
+#include "MkBndCon.hpp"
 
 #ifdef __BCPLUSPLUS__
 #include <vcl.h>

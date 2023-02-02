@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-#include "MkKrig.h"
+#include "MkKrig.hpp"
 
 MkKrig::MkKrig()
 {
@@ -84,10 +84,10 @@ void MkKrig::SetupMatrix()
     isSetup = false;
 }
 
-MkMatrix &MkKrig::S()
+MkMatrix<float> &MkKrig::S()
 {
     if(!isSetup) return FS;
-    MkVector v;
+    MkVector<float> v;
     for (int j=0;j<FI;j++) {
         v = S(FDataPoints[j]);
         for (int i=0;i<FI;i++)
@@ -98,14 +98,14 @@ MkMatrix &MkKrig::S()
     return FS;
 }
 
-MkVector &MkKrig::S(MkPoint &rp)
+MkVector<float> &MkKrig::S(MkPoint &rp)
 {
     float x,y,z;
     x = rp.X;y = rp.Y;z = rp.Z;
     return S(x,y,z);
 }
 
-MkVector &MkKrig::S(float x,float y,float z)
+MkVector<float> &MkKrig::S(float x,float y,float z)
 {
     float h;
     for (int i = 0 ; i < FI ;i++){
@@ -117,10 +117,10 @@ MkVector &MkKrig::S(float x,float y,float z)
     return FSZ;
 }
 
-MkMatrix &MkKrig::P()
+MkMatrix<float> &MkKrig::P()
 {
     if(!isSetup) return FP;
-    MkVector v;
+    MkVector<float> v;
     for (int i=0;i<FI;i++) {
         v = P(FDataPoints[i]);
         for (int j=0;j<FJ;j++)
@@ -129,14 +129,14 @@ MkMatrix &MkKrig::P()
     return FP;
 }
 
-MkVector &MkKrig::P(MkPoint &rp)
+MkVector<float> &MkKrig::P(MkPoint &rp)
 {
     float x,y,z;
     x = rp.X;y = rp.Y;z = rp.Z;
     return P(x,y,z);
 }
 
-MkVector &MkKrig::P(float x,float y,float z)
+MkVector<float> &MkKrig::P(float x,float y,float z)
 {
     FPZ(0) = 1;
     FPZ(1) = x;
@@ -151,11 +151,11 @@ MkVector &MkKrig::P(float x,float y,float z)
     return FPZ;
 }
 
-MkVector & MkKrig::A()
+MkVector<float> & MkKrig::A()
 {
     if(!isSetup) return FA;
-    MkMatrix pt,pt1,p,s1,m,s2;
-    MkVector x;
+    MkMatrix<float> pt,pt1,p,s1,m,s2;
+    MkVector<float> x;
 
     p = P();
     pt = p;
@@ -174,7 +174,7 @@ MkVector & MkKrig::A()
     return FA;
 }
 
-MkVector &MkKrig::M()
+MkVector<float> &MkKrig::M()
 {
     if(!isSetup) return FM;
     float a;
@@ -197,13 +197,13 @@ float MkKrig::M(float x,float y,float z)
 
 //    static MkVector v;
     float result;
-    MkVector v;
+    MkVector<float> v;
     v = P(x,y,z);
     result = FA*v;
     return result;   
 }
 
-MkVector &MkKrig::R()
+MkVector<float> &MkKrig::R()
 {
     if(!isSetup) return FR;
     FR = X();
@@ -221,8 +221,8 @@ float MkKrig::R(MkPoint &rp)
 float MkKrig::R(float x,float y,float z)
 {
     float result;
-    MkVector r,v1,s;
-    MkMatrix m;
+    MkVector<float> r,v1,s;
+    MkMatrix<float> m;
     r = R();
     s = S(x,y,z);
     m = FIS;
@@ -231,7 +231,7 @@ float MkKrig::R(float x,float y,float z)
     return result;
 }
 
-MkVector &MkKrig::X()
+MkVector<float> &MkKrig::X()
 {
   if(!isSetup) return FX;
    for (int i=0;i < FI;i++)

@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
-#include "MkMeshTest.h"
+#include "MkMeshTest.hpp"
 
 #define GI 20
 #define GJ 20
@@ -270,7 +270,7 @@ bool pos(void)
   float unval,dist;
   float rho_j=1, m_j=1;
   static bool flag=true;
-  MkVector Xi(3), rij(3), rhs(3);
+  MkVector<float> Xi(3), rij(3), rhs(3);
   int gridnum;
   MkInt grids(9);
   int I,J,II,JJ;
@@ -430,7 +430,7 @@ float repos(float Mu)
   float unval,dist;
   float rho_j=1, m_j=1;
   static bool flag=true;
-  MkVector Xi(3), rij(3), rhs(3);
+  MkVector<float> Xi(3), rij(3), rhs(3);
   int gridnum;
   MkInt grids(9);
   int I,J,II,JJ;
@@ -669,7 +669,8 @@ void display(void)
   glRotatef(180, 0.,0.,1.);
 
   Particles.Draw();
-  Lines.Draw();
+  // TODO : Check Why Lines does not have Draw Member Function?
+  // Lines.Draw();
   glPopMatrix();
   // this is the new line
   // previously it was: angle++;

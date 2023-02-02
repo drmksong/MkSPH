@@ -2,13 +2,13 @@
 #ifndef MkGridH
 #define MkGridH
 
-#include "MkMisc.h"
-#include "MkPoint.h"
+#include "MkMisc.hpp"
+#include "MkPoint.hpp"
 #include "MkFloat.h"
-#include "MkCube.h"
-#include "MkFault.h"
-#include "MkPlane.h"
-#include "MkKrig.h"
+#include "MkCube.hpp"
+#include "MkFault.hpp"
+#include "MkPlane.hpp"
+#include "MkKrig.hpp"
 
 class MkTopoGrid {
 private:
